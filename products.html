@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | SLK Traders - Precision Engineering Solutions</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; }
+        .product-card:hover .product-img { transform: scale(1.05); }
+        .cat-btn.active { background-color: #0a111f; color: #ffffff; }
+        .cat-btn { background: transparent; color: #4b5563; }
+        .product-item { display: block; }
+        .product-item.hidden-item { display: none; }
+    </style>
+</head>
+<body class="bg-white text-primary">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <nav class="container mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="SLK Traders" class="h-10 w-auto">
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                <a href="about.html" class="font-medium hover:text-accent transition-colors">About Us</a>
+                <a href="products.html" class="font-medium text-accent border-b-2 border-accent">Products</a>
+                <a href="contact.html" class="font-medium hover:text-accent transition-colors">Contact Us</a>
+            </div>
+            <a href="contact.html" class="hidden md:block bg-accent text-white px-6 py-2.5 rounded hover:bg-accent-hover transition-all font-semibold text-sm">
+                Request a Quote
+            </a>
+            <button class="md:hidden text-primary text-2xl" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="pt-32 pb-10 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-accent mb-3">Catalogue &rsaquo; Precision Engineering</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-3">Industrial Components</h1>
+            <p class="text-gray-500 max-w-2xl">Discover our range of high-performance technical parts designed for extreme durability and precise operational standards.</p>
+        </div>
+    </section>
+
+    <!-- Main: Sidebar + Products -->
+    <section class="py-10 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+
+                <!-- Sidebar -->
+                <aside class="lg:w-64 flex-shrink-0">
+                    <div class="mb-6">
+                        <p class="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-3">Categories</p>
+                        <ul class="space-y-0.5">
+                            <li><button class="cat-btn active w-full text-left px-4 py-2.5 rounded font-semibold text-sm flex items-center justify-between transition-colors" data-cat="all">All Products <span class="text-xs bg-gray-200 text-gray-600 rounded-full px-2 py-0.5 font-bold" id="count-all">38</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="paper-mill">Paper Mill Products <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">7</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="power-plant">Power Plant Spares <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">4</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="tea-industry">Tea Industry Products <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">6</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="pipeline">Pipeline &amp; Fittings <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">4</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="boiler-spares">Boiler Spares (ABL &amp; IJT) <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">4</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="general-castings">General Castings &amp; Fabrication <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">3</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="agriculture">Agriculture Castings <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">3</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="manhole">Manhole Covers &amp; Frames <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">4</span></button></li>
+                            <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="custom">Custom Manufacturing <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">3</span></button></li>
+                        </ul>
+                    </div>
+                    <!-- Custom Order Card -->
+                    <div class="bg-primary rounded-xl p-5 mt-4">
+                        <p class="text-xs font-black uppercase tracking-widest text-accent mb-2">Custom Order</p>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-4">Can't find a specific part? We source globally &amp; manufacture as per your drawing.</p>
+                        <a href="contact.html" class="text-sm font-bold text-accent hover:underline flex items-center gap-1">
+                            Enquire Now <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Products Area -->
+                <div class="flex-1">
+                    <!-- Search Bar -->
+                    <div class="mb-6 pb-4 border-b border-gray-100">
+                        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
+                            <div class="flex-1 w-full lg:max-w-md">
+                                <div class="relative">
+                                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                                    <input type="text" id="product-search" placeholder="Search products by name or code..." class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all">
+                                </div>
+                            </div>
+                            <div class="flex flex-col xs:flex-row items-start xs:items-center gap-3 xs:gap-4 w-full lg:w-auto">
+                                <p class="text-sm text-gray-500">Showing <span class="font-bold text-primary" id="showing-count">38</span> of <span class="font-bold text-primary" id="total-count">38</span> products</p>
+                                <select class="text-sm font-semibold text-primary border border-gray-200 rounded px-3 py-1.5 bg-white focus:outline-none focus:border-accent w-full xs:w-auto">
+                                    <option>Newest First</option>
+                                    <option>Name A–Z</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== PRODUCT GRID ===== -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6" id="product-grid">
+
+                        <!-- ── PAPER MILL (7) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="paper-mill">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PAPER MILL</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PM-001</p><h3 class="font-bold text-primary text-sm mb-1">Refiner Plates &amp; Fillings</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI/SS precision-machined refiner plates for high-speed paper pulp processing. Custom profiles available.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="paper-mill">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5f64d06a?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PAPER MILL</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PM-002</p><h3 class="font-bold text-primary text-sm mb-1">Dryer Brackets &amp; Housings</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Cast iron dryer brackets and housings engineered for paper machine dryer cylinders and supporting frames.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="paper-mill">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PAPER MILL</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PM-003</p><h3 class="font-bold text-primary text-sm mb-1">Screw Conveyors</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Heavy-duty screw conveyors in CI/MS for pulp and paper stock transfer in mill environments.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="paper-mill">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PAPER MILL</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PM-004</p><h3 class="font-bold text-primary text-sm mb-1">Tanks &amp; Pressure Vessels</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">MS/SS fabricated tanks and pressure vessels for paper mill chemical and stock storage applications.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="paper-mill">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PAPER MILL</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PM-005</p><h3 class="font-bold text-primary text-sm mb-1">Rotors, Shafts &amp; Impellers</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Precision-machined rotors, shafts and impellers in CI/SS/Bronze for paper stock pumps and agitators.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="paper-mill">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PAPER MILL</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PM-006</p><h3 class="font-bold text-primary text-sm mb-1">Agitator Blades</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">SS/CI agitator blades for paper pulp mixing tanks — custom pitch, diameter and material on request.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="paper-mill">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PAPER MILL</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PM-007</p><h3 class="font-bold text-primary text-sm mb-1">Screen Plates</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">SS screen plates with precisely drilled/slotted perforations for pulp screening and classification equipment.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <!-- ── POWER PLANT (4) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="power-plant">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">POWER PLANT</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PP-001</p><h3 class="font-bold text-primary text-sm mb-1">Boiler Spares</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">High-temperature-resistant boiler spares including tubes, headers, drums and pressure part castings for power plants.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="power-plant">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">POWER PLANT</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PP-002</p><h3 class="font-bold text-primary text-sm mb-1">ESP Parts</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Electrostatic precipitator components — collecting plates, discharge electrodes, rapper systems and rapper shafts.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="power-plant">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5f64d06a?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">POWER PLANT</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PP-003</p><h3 class="font-bold text-primary text-sm mb-1">Dust Collector Parts</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI/MS fabricated dust collector housings, hopper sections, rotary air locks and conveying components.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="power-plant">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">POWER PLANT</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PP-004</p><h3 class="font-bold text-primary text-sm mb-1">O&amp;M Spares</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Operations and maintenance spares for thermal power stations — bearings, seals, wear parts, gaskets and fasteners.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <!-- ── TEA INDUSTRY (6) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="tea-industry">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">TEA INDUSTRY</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-TI-001</p><h3 class="font-bold text-primary text-sm mb-1">Stove Tubes</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Heat-resistant stove tubes for tea factory fired boiler systems — available in various diameters and lengths.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="tea-industry">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">TEA INDUSTRY</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-TI-002</p><h3 class="font-bold text-primary text-sm mb-1">Economiser Tubes</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Steel economiser tubes for heat recovery in tea factory boiler systems, improving fuel efficiency.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="tea-industry">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">TEA INDUSTRY</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-TI-003</p><h3 class="font-bold text-primary text-sm mb-1">Ariel Flow Fans</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI/MS centrifugal and axial fans for withering troughs, dryers and boiler air supply systems in tea factories.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="tea-industry">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">TEA INDUSTRY</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-TI-004</p><h3 class="font-bold text-primary text-sm mb-1">Gas Burners</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Industrial gas burners for tea dryer machines and withering trough heaters — precision flame control design.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="tea-industry">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5f64d06a?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">TEA INDUSTRY</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-TI-005</p><h3 class="font-bold text-primary text-sm mb-1">Storage Bins</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">MS/SS fabricated storage bins and hoppers for green leaf, made tea and fuel storage in processing facilities.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="tea-industry">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">TEA INDUSTRY</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-TI-006</p><h3 class="font-bold text-primary text-sm mb-1">Feed Hoppers</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI/MS feed hoppers for withering trough loading systems and CTC/orthodox leaf-feeding machinery.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <!-- ── PIPELINE & FITTINGS (4) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="pipeline">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5f64d06a?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PIPELINE</span><span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-0.5 rounded">IS 7181</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PL-001</p><h3 class="font-bold text-primary text-sm mb-1">CI Double Flange Pipes</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Cast iron double flange pipes, 80–1200mm dia. IS 7181 / IS 1538 compliant. Suitable for water, sewage and industrial fluid transport.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="pipeline">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PIPELINE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PL-002</p><h3 class="font-bold text-primary text-sm mb-1">Puddle Pipes</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI puddle pipes (collar pipes) for embedded water-stop applications in retaining walls and dams.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="pipeline">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PIPELINE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PL-003</p><h3 class="font-bold text-primary text-sm mb-1">Bends, Tees &amp; Reducers</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI flanged bends (90°/45°/22.5°), equal/unequal tees and tapers — matching pipe standards IS 7181.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="pipeline">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">PIPELINE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-PL-004</p><h3 class="font-bold text-primary text-sm mb-1">Collars &amp; Joints</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI flanged collars, gland joints and mechanical couplings for pipeline connections in water and sewage systems.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <!-- ── BOILER SPARES ABL & IJT (4) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="boiler-spares">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">BOILER</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-BS-001</p><h3 class="font-bold text-primary text-sm mb-1">Stoker Components</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">ABL &amp; IJT compatible stoker parts including grate bars, side plates, drive shafts and bearing housings in CI.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="boiler-spares">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">BOILER</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-BS-002</p><h3 class="font-bold text-primary text-sm mb-1">Feeder Parts</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Fuel feeder and screw conveyor components for ABL/IJT boiler systems — shafts, helical screws and troughs in MS/CI.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="boiler-spares">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">BOILER</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-BS-003</p><h3 class="font-bold text-primary text-sm mb-1">Ash Handling Plant Parts</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI/MS ash hopper components, drag chains, clinker grinders and conveyor troughs for boiler ash handling systems.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="boiler-spares">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">BOILER</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-BS-004</p><h3 class="font-bold text-primary text-sm mb-1">Recovery Boiler Parts</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Wear-resistant CI/alloy steel parts for chemical recovery boilers — smelt spouts, floor tubes and support castings.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <!-- ── GENERAL CASTINGS & FABRICATION (3) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="general-castings">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5f64d06a?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">CASTINGS</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-GC-001</p><h3 class="font-bold text-primary text-sm mb-1">Ferrous Castings (CI / CS / SS)</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Grey CI, carbon steel and stainless steel castings — rough and finish-machined, as per customer drawings and IS standards.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="general-castings">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">CASTINGS</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-GC-002</p><h3 class="font-bold text-primary text-sm mb-1">Non-Ferrous Castings</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Bronze, brass and gunmetal castings for bearings, bushes, valves and marine applications — machined to tolerance.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="general-castings">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">FABRICATION</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-GC-003</p><h3 class="font-bold text-primary text-sm mb-1">MS &amp; SS Fabrication</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Mild steel and stainless steel fabrication — structural frames, platforms, tanks, ducts and custom assemblies with full welding support.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <!-- ── AGRICULTURE (3) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="agriculture">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">AGRICULTURE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-AG-001</p><h3 class="font-bold text-primary text-sm mb-1">Agricultural Rings</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI agricultural rings for power tillers, cultivators and irrigation pump systems — standard and custom sizes.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="agriculture">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">AGRICULTURE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-AG-002</p><h3 class="font-bold text-primary text-sm mb-1">Agricultural Wheels</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Cast iron wheels for threshers, power tillers and agricultural implement trailers — high-load bearing capacity.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="agriculture">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">AGRICULTURE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-AG-003</p><h3 class="font-bold text-primary text-sm mb-1">Custom Agri Components</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Custom CI/MS castings for tractors, harvesters and irrigation machinery — manufactured as per OEM drawings.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <!-- ── MANHOLE COVERS & FRAMES (4) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="manhole">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">MANHOLE</span><span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-0.5 rounded">BEST SELLER</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-MH-001</p><h3 class="font-bold text-primary text-sm mb-1">Manhole Covers</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Heavy-duty CI/ductile iron manhole covers — D400/E600 load class, anti-slip surface, single or double seal.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="manhole">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5f64d06a?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">MANHOLE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-MH-002</p><h3 class="font-bold text-primary text-sm mb-1">Manhole Frames</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI flanged and unflanged manhole frames for road, footpath and industrial installation — matching CI covers.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="manhole">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">MANHOLE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-MH-003</p><h3 class="font-bold text-primary text-sm mb-1">Gratings</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI/ductile iron road gratings and inlet gratings for storm water drainage — various sizes and patterns available.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="manhole">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">MANHOLE</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-MH-004</p><h3 class="font-bold text-primary text-sm mb-1">Surface Boxes</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">CI surface boxes for water and gas valves, fire hydrants and utility access — lockable lid options available.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <!-- ── CUSTOM MANUFACTURING (3) ── -->
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="custom">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">CUSTOM</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-CM-001</p><h3 class="font-bold text-primary text-sm mb-1">As Per Drawing Manufacturing</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">We manufacture any casting, machined part or fabricated component strictly as per customer-supplied drawings and specifications.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="custom">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">CUSTOM</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-CM-002</p><h3 class="font-bold text-primary text-sm mb-1">Design Support Services</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Engineering design support for new component development — pattern making, prototype casting and design-for-manufacture guidance.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                        <div class="product-item product-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300" data-cat="custom">
+                            <div class="relative overflow-hidden h-44"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="" class="product-img w-full h-full object-cover transition-transform duration-500"><span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">CUSTOM</span></div>
+                            <div class="p-4"><p class="text-xs text-gray-400 font-mono mb-1">SLK-CM-003</p><h3 class="font-bold text-primary text-sm mb-1">Full In-House Production</h3><p class="text-xs text-gray-500 mb-3 leading-relaxed">Complete in-house foundry, machining and fabrication facilities — single-source supply from raw material to finished product delivery.</p><a href="contact.html" class="block w-full text-center bg-accent text-white text-xs font-bold py-2 rounded hover:bg-accent-hover transition-all">Request Quote</a></div>
+                        </div>
+
+                    </div>
+                    <!-- No results message -->
+                    <div id="no-results" class="hidden text-center py-20 text-gray-400">
+                        <i class="fa-solid fa-box-open text-5xl mb-4 block"></i>
+                        <p class="text-lg font-semibold">No products found in this category.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="bg-primary rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full -ml-48 -mb-48 blur-3xl"></div>
+                <div class="relative z-10 space-y-8">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-white">Ready to start your project?</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto text-lg">Get a custom quote for your technical requirements today. Our engineering team is ready to assist.</p>
+                    <a href="contact.html" class="inline-block bg-accent text-white px-10 py-4 rounded-lg font-bold hover:bg-accent-hover transition-all text-lg shadow-xl shadow-accent/20">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary pt-20 pb-10 border-t border-white/10">
+        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="space-y-6">
+                <a href="index.html" class="inline-block bg-white rounded-lg px-3 py-2">
+                    <img src="images/logo.png" alt="SLK Traders" class="h-7 w-auto">
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed">Precision-engineered solutions for the world's most demanding industrial sectors. From casting to delivery.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Privacy Policy</a></li>
+                    <li><a href="about.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Terms of Service</a></li>
+                    <li><a href="contact.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Compliance</a></li>
+                    <li><a href="contact.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Products</h4>
+                <ul class="space-y-3">
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Paper Mill Products</a></li>
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Power Plant Spares</a></li>
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Pipeline &amp; Fittings</a></li>
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Boiler Spares (ABL &amp; IJT)</a></li>
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">General Castings &amp; Fabrication</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Contact</h4>
+                <div class="space-y-4">
+                    <div class="flex gap-3"><i class="fa-solid fa-location-dot text-accent mt-1"></i><p class="text-sm text-gray-400">123 Industrial Estate, Block B,<br>Engineering Hub, CIP 560001</p></div>
+                    <div class="flex gap-3"><i class="fa-solid fa-phone text-accent mt-1"></i><p class="text-sm text-gray-400">+91 (800) 245-0900</p></div>
+                    <div class="flex gap-3"><i class="fa-solid fa-envelope text-accent mt-1"></i><p class="text-sm text-gray-400">info@slktraders.com</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 pt-8 border-t border-white/10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-500">© 2024 SLK TRADERS. Industrial Engineering Excellence Since 1992.</p>
+                <div class="flex gap-6">
+                    <img src="https://img.icons8.com/color/48/iso.png" alt="ISO Certified" class="h-6 opacity-30 grayscale">
+                    <img src="https://img.icons8.com/color/48/safe-ok.png" alt="Safety Compliant" class="h-6 opacity-30 grayscale">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-[100] translate-x-full transition-transform duration-500 flex flex-col items-center justify-center space-y-8 p-10">
+        <button id="menu-close" class="absolute top-6 right-6 text-white text-3xl"><i class="fa-solid fa-xmark"></i></button>
+        <a href="index.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">About Us</a>
+        <a href="products.html" class="text-white text-3xl font-bold border-b-2 border-accent">Products</a>
+        <a href="contact.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Contact Us</a>
+        <a href="contact.html" class="bg-accent text-white px-8 py-3 rounded-lg font-bold text-xl">Request Quote</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // ── Category Filter & Search ──
+        const catBtns = document.querySelectorAll('.cat-btn');
+        const productItems = document.querySelectorAll('.product-item');
+        const showingEl = document.getElementById('showing-count');
+        const totalEl = document.getElementById('total-count');
+        const noResults = document.getElementById('no-results');
+        const searchInput = document.getElementById('product-search');
+
+        let selectedCategory = 'all';
+        let searchQuery = '';
+
+        function updateProductDisplay() {
+            let count = 0;
+
+            productItems.forEach(item => {
+                const catMatch = selectedCategory === 'all' || item.dataset.cat === selectedCategory;
+                
+                // Get product name and description for search
+                const title = item.querySelector('h3')?.textContent.toLowerCase() || '';
+                const desc = item.querySelector('p:nth-of-type(2)')?.textContent.toLowerCase() || '';
+                const code = item.querySelector('p:first-of-type')?.textContent.toLowerCase() || '';
+                
+                const searchMatch = !searchQuery || title.includes(searchQuery.toLowerCase()) || 
+                                   desc.includes(searchQuery.toLowerCase()) || 
+                                   code.includes(searchQuery.toLowerCase());
+
+                if (catMatch && searchMatch) {
+                    item.classList.remove('hidden-item');
+                    count++;
+                } else {
+                    item.classList.add('hidden-item');
+                }
+            });
+
+            showingEl.textContent = count;
+            noResults.classList.toggle('hidden', count > 0);
+        }
+
+        // Category filter
+        catBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                catBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.style.backgroundColor = '';
+                    b.style.color = '';
+                });
+                btn.classList.add('active');
+                selectedCategory = btn.dataset.cat;
+                updateProductDisplay();
+            });
+        });
+
+        // Search filter
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                updateProductDisplay();
+            });
+        }
+    </script>
+</body>
+</html>

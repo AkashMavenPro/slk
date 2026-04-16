@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SLK Traders - Industrial Supply & Engineering</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @layer base {
+            body { font-family: 'Inter', sans-serif; }
+            h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+        }
+        .contact-input {
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .contact-input:focus {
+            border-color: #f26522;
+            box-shadow: 0 0 0 3px rgba(242,101,34,0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-primary">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <nav class="container mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="SLK Traders" class="h-10 w-auto">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                <a href="about.html" class="font-medium hover:text-accent transition-colors">About Us</a>
+                <a href="products.html" class="font-medium hover:text-accent transition-colors">Products</a>
+                <a href="contact.html" class="font-medium text-accent border-b-2 border-accent">Contact Us</a>
+            </div>
+
+            <a href="contact.html" class="hidden md:block bg-accent text-white px-6 py-2.5 rounded hover:bg-accent-hover transition-all font-semibold text-sm">
+                Request a Quote
+            </a>
+
+            <button class="md:hidden text-primary text-2xl" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Contact Hero: Info Left + Form Right -->
+    <section class="pt-32 pb-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+
+            <!-- Page Label + Heading -->
+            <p class="text-xs font-black uppercase tracking-[0.25em] text-accent mb-4">Connect With Us</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-primary leading-tight mb-10">
+                Get in touch with our<br>engineering team.
+            </h1>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+
+                <!-- LEFT: Contact Info -->
+                <div class="space-y-8">
+
+                    <!-- Headquarters -->
+                    <div class="flex gap-4">
+                        <div class="mt-0.5 text-primary">
+                            <i class="fa-solid fa-location-dot text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">Headquarters</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Industrial Zone Sector 12,<br>
+                                Precision Hub, Suite 400,<br>
+                                Chennai, Tamil Nadu 600001
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex gap-4">
+                        <div class="mt-0.5 text-primary">
+                            <i class="fa-solid fa-phone text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">Phone</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Main Office: +91 44 2835 0500<br>
+                                Sales: +91 98400 72345
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex gap-4">
+                        <div class="mt-0.5 text-primary">
+                            <i class="fa-solid fa-envelope text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">Email</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                General: info@slktraders.com<br>
+                                Support: help@slktraders.com
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Technical Assistance Card -->
+                    <div class="border-l-4 border-accent bg-surface-muted pl-5 py-4 pr-4 rounded-r-xl">
+                        <h4 class="font-bold text-primary text-sm mb-1">Technical Assistance</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed">
+                            Our engineers are available Monday to Friday,<br>
+                            8:00 AM – 6:00 PM IST for specialist<br>
+                            technical guidance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Contact Form -->
+                <div>
+                    <form action="#" class="space-y-4">
+                        <!-- Row 1: Full Name + Company -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Full Name</label>
+                                <input type="text" placeholder="John Doe"
+                                    class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Company</label>
+                                <input type="text" placeholder="Industrial Corp"
+                                    class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm">
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Phone + Email -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Phone</label>
+                                <input type="tel" placeholder="+91 98000 00000"
+                                    class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Email</label>
+                                <input type="email" placeholder="john@example.com"
+                                    class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm">
+                            </div>
+                        </div>
+
+                        <!-- Category of Interest -->
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Category of Interest</label>
+                            <select class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm text-gray-700">
+                                <option>Precision Machining</option>
+                                <option>Paper Mill Components</option>
+                                <option>Boiler Systems</option>
+                                <option>Power Plant Parts</option>
+                                <option>Agriculture Equipment</option>
+                                <option>General Casting</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Message</label>
+                            <textarea rows="5" placeholder="How can we assist with your project?"
+                                class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm resize-none"></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-3 rounded font-bold text-sm hover:bg-primary-light transition-all flex items-center justify-center gap-2">
+                            Submit Inquiry <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Location / Map Section -->
+    <section class="py-16 bg-surface-muted">
+        <div class="container mx-auto px-4 md:px-8 flex justify-center">
+            <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-8 text-center max-w-sm w-full">
+                <!-- Icon -->
+                <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-building-location text-accent text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-extrabold text-primary mb-2">Live Location Data</h3>
+                <p class="text-xs text-gray-500 mb-5 leading-relaxed">Interactive mapping component will be rendered here for real-time navigation.</p>
+                <!-- Map Placeholder Image -->
+                <div class="w-full h-36 bg-gray-200 rounded-xl overflow-hidden relative">
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-50 grayscale"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fa-solid fa-location-pin text-accent text-3xl drop-shadow"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-3">
+                Ready to start your next<br>engineering masterpiece?
+            </h2>
+            <p class="text-sm text-gray-400 mb-8">
+                Partner with SLK Traders for unrivalled precision and reliability in industrial supplies.
+            </p>
+            <a href="#" onclick="document.querySelector('form').scrollIntoView({behavior:'smooth'}); return false;"
+                class="inline-block bg-accent text-white px-8 py-3 rounded font-bold text-sm hover:bg-accent-hover transition-all">
+                Get a Professional Quote Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-12 pb-8 border-t border-gray-200">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/logo.png" alt="SLK Traders" class="h-8 w-auto">
+                    </a>
+                    <p class="text-xs text-gray-500 leading-relaxed">Supplying the backbone of modern industry with precision-engineered components and global logistics.</p>
+                </div>
+
+                <!-- Solutions -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-widest text-primary">Solutions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="products.html" class="text-xs text-gray-500 hover:text-accent transition-colors">Machine Components</a></li>
+                        <li><a href="products.html" class="text-xs text-gray-500 hover:text-accent transition-colors">Metal Fabrication</a></li>
+                        <li><a href="products.html" class="text-xs text-gray-500 hover:text-accent transition-colors">Supply Chain</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-widest text-primary">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Sitemap</a></li>
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Compliance</a></li>
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Technical Data</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-widest text-primary">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-6 border-t border-gray-100">
+                <p class="text-xs text-gray-400">© 2024 SLK TRADERS. Precision Engineering</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-[100] translate-x-full transition-transform duration-500 flex flex-col items-center justify-center space-y-8 p-10">
+        <button id="menu-close" class="absolute top-6 right-6 text-white text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="index.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">About Us</a>
+        <a href="products.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Products</a>
+        <a href="contact.html" class="text-white text-3xl font-bold border-b-2 border-accent">Contact Us</a>
+        <a href="contact.html" class="bg-accent text-white px-8 py-3 rounded-lg font-bold text-xl">Request Quote</a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

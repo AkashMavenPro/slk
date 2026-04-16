@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SLK Traders</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @layer base {
+            body { font-family: 'Inter', sans-serif; }
+            h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-primary">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <nav class="container mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="SLK Traders" class="h-10 w-auto">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                <a href="about.html" class="font-medium text-accent border-b-2 border-accent">About Us</a>
+                <a href="products.html" class="font-medium hover:text-accent transition-colors">Products</a>
+                <a href="contact.html" class="font-medium hover:text-accent transition-colors">Contact Us</a>
+            </div>
+
+            <a href="contact.html" class="hidden md:block bg-accent text-white px-6 py-2.5 rounded hover:bg-accent-hover transition-all font-semibold text-sm">
+                Request a Quote
+            </a>
+
+            <button class="md:hidden text-primary text-2xl" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Title / Hero -->
+    <section class="pt-40 pb-20 bg-white overflow-hidden">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row items-end justify-between gap-12">
+                <div class="lg:w-2/3 space-y-6">
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-primary">
+                        Defining the Standard in <br> <span class="text-accent">Industrial Supplies.</span>
+                    </h1>
+                </div>
+                <div class="lg:w-1/3">
+                    <p class="text-lg text-gray-500 border-l-4 border-accent pl-6 leading-relaxed">
+                        From humble beginnings to an industry titan, SLK Traders represents the fusion of precision engineering and unwavering reliability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Drafting Table" class="w-full h-[600px] object-cover grayscale">
+                    </div>
+                    <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+                </div>
+                <div class="space-y-8">
+                    <h2 class="text-4xl font-extrabold text-primary">Our Story: A Legacy of Precision</h2>
+                    <div class="space-y-6 text-base text-gray-600 leading-relaxed">
+                        <p>Founded in the heart of the industrial sector, SLK Traders began as a specialized consultancy focused on precision tool distribution. Our journey started with a singular vision: to bridge the gap between high-performance engineering requirements and supply chain efficiency.</p>
+                        <p>Over three decades, we have evolved from a local supplier into a global powerhouse. Our growth is marked not just by volume, but by the complexity of the problems we solve. We have weathered market shifts and technological revolutions by remaining anchored to our core philosophy: "Integrity in Every Component."</p>
+                        <p>Today, SLK Traders serves critical sectors including aerospace, automotive, and heavy manufacturing, providing components that form the backbone of modern infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Timeline — WHITE background -->
+    <section class="py-24 bg-white overflow-hidden relative">
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <h2 class="text-4xl font-extrabold mb-20 text-primary">Milestones of Progress</h2>
+
+            <div class="relative">
+                <!-- Center Line -->
+                <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 hidden md:block"></div>
+
+                <!-- 1992 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 mb-24 relative group">
+                    <div class="md:w-1/2 md:text-right">
+                        <span class="text-8xl md:text-9xl font-black text-gray-100 group-hover:text-accent/20 transition-colors select-none">1992</span>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-accent border-4 border-white shadow hidden md:block"></div>
+                    <div class="md:w-1/2 bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                        <h4 class="text-2xl font-bold mb-3 text-primary">Foundation and Vision</h4>
+                        <p class="text-gray-500">SLK Traders established in a small office with a focus on specialized bearings and lubricants.</p>
+                    </div>
+                </div>
+
+                <!-- 2005 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-24 relative group">
+                    <div class="md:w-1/2">
+                        <span class="text-8xl md:text-9xl font-black text-gray-100 group-hover:text-accent/20 transition-colors select-none">2005</span>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-accent border-4 border-white shadow hidden md:block"></div>
+                    <div class="md:w-1/2 bg-gray-50 p-8 rounded-2xl border border-gray-100 md:text-right">
+                        <h4 class="text-2xl font-bold mb-3 text-primary">National Expansion</h4>
+                        <p class="text-gray-500">Opening of regional distribution hubs and the launch of our specialized metallurgical testing lab.</p>
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 relative group">
+                    <div class="md:w-1/2 md:text-right">
+                        <span class="text-8xl md:text-9xl font-black text-gray-100 group-hover:text-accent/20 transition-colors select-none">2020</span>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-accent border-4 border-white shadow hidden md:block"></div>
+                    <div class="md:w-1/2 bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                        <h4 class="text-2xl font-bold mb-3 text-primary">The Digital Frontier</h4>
+                        <p class="text-gray-500">Implementation of AI-driven supply chain management and automated warehousing facilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hub of Innovation — DARK background -->
+    <section class="py-24 bg-primary relative overflow-hidden">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8 order-2 lg:order-1">
+                    <h2 class="text-4xl font-extrabold text-white">Inside the Hub of Innovation</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed">Our 50,000 sq. ft. facility is more than just a warehouse—it's a precision ecosystem designed for maximum reliability and speed. Explore our operational excellence.</p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-6 bg-white/10 rounded-xl border border-white/10">
+                            <div class="text-4xl font-black text-white mb-1">10k+</div>
+                            <div class="text-xs font-bold uppercase tracking-widest text-accent">Sq. Ft Facility</div>
+                        </div>
+                        <div class="p-6 bg-white/10 rounded-xl border border-white/10">
+                            <div class="text-4xl font-black text-white mb-1">24/7</div>
+                            <div class="text-xs font-bold uppercase tracking-widest text-accent">Operations</div>
+                        </div>
+                        <div class="p-6 bg-white/10 rounded-xl border border-white/10">
+                            <div class="text-4xl font-black text-white mb-1">100%</div>
+                            <div class="text-xs font-bold uppercase tracking-widest text-accent">Quality Trace</div>
+                        </div>
+                        <div class="p-6 bg-white/10 rounded-xl border border-white/10">
+                            <div class="text-4xl font-black text-white mb-1">0.05%</div>
+                            <div class="text-xs font-bold uppercase tracking-widest text-accent">Error Rate</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden group cursor-pointer order-1 lg:order-2 shadow-2xl" id="video-trigger">
+                    <img src="https://images.unsplash.com/photo-1565034946487-077786996e27?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Innovation Hub" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-primary/40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white text-3xl shadow-xl animate-bounce">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <span class="absolute bottom-8 text-white font-bold uppercase tracking-[0.2em] text-sm">Play Facility Walkthrough</span>
+                    </div>
+                </div>
+
+                <!-- Video Modal -->
+                <div id="video-modal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+                    <div class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl">
+                        <button id="close-video" class="absolute top-4 right-4 z-10 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white hover:bg-accent-hover transition-all">
+                            <i class="fa-solid fa-xmark text-lg"></i>
+                        </button>
+                        <div class="relative pt-[56.25%]">
+                            <iframe id="video-iframe" class="absolute inset-0 w-full h-full" src="" title="SLK Traders Facility Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5f64d06a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="rounded-2xl h-64 w-full object-cover shadow-lg" alt="Machining">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="rounded-2xl h-64 w-full object-cover shadow-lg" alt="Warehouse">
+                <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="rounded-2xl h-64 w-full object-cover shadow-lg" alt="Engineer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Certified Excellence -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-4xl font-extrabold text-primary">Certified Excellence</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-surface-muted p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent group-hover:text-white transition-all text-2xl text-accent shadow-sm">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-primary">BIS Certified</h4>
+                    <p class="text-xs text-gray-400">Bureau of Indian Standards compliance for all structural components.</p>
+                </div>
+                <div class="bg-surface-muted p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent group-hover:text-white transition-all text-2xl text-accent shadow-sm">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-primary">ISO 9001:2015</h4>
+                    <p class="text-xs text-gray-400">Global standard for quality management systems and operational rigor.</p>
+                </div>
+                <div class="bg-surface-muted p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent group-hover:text-white transition-all text-2xl text-accent shadow-sm">
+                        <i class="fa-solid fa-recycle"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-primary">ISO 14001</h4>
+                    <p class="text-xs text-gray-400">Environmental management certification for sustainable operations.</p>
+                </div>
+                <div class="bg-surface-muted p-10 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent group-hover:text-white transition-all text-2xl text-accent shadow-sm">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-primary">CE Marking</h4>
+                    <p class="text-xs text-gray-400">Conformity with health, safety, and environmental protection standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary pt-20 pb-10 border-t border-white/10">
+        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="space-y-6">
+                <a href="index.html" class="inline-block bg-white rounded-lg px-3 py-2">
+                    <img src="images/logo.png" alt="SLK Traders" class="h-7 w-auto">
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed">Precision-engineered solutions for the world's most demanding industrial sectors. From casting to delivery.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Privacy Policy</a></li>
+                    <li><a href="about.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Terms of Service</a></li>
+                    <li><a href="contact.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Compliance</a></li>
+                    <li><a href="contact.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Products</h4>
+                <ul class="space-y-3">
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Casting Services</a></li>
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Industrial Machining</a></li>
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Fabrication</a></li>
+                    <li><a href="products.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Quality Control</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Contact</h4>
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <i class="fa-solid fa-location-dot text-accent mt-1"></i>
+                        <p class="text-sm text-gray-400">123 Industrial Estate, Block B,<br>Engineering Hub, CIP 560001</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fa-solid fa-phone text-accent mt-1"></i>
+                        <p class="text-sm text-gray-400">+91 (800) 245-0900</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fa-solid fa-envelope text-accent mt-1"></i>
+                        <p class="text-sm text-gray-400">info@slktraders.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 pt-8 border-t border-white/10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-500">© 2024 SLK TRADERS. Industrial Engineering Excellence Since 1992.</p>
+                <div class="flex gap-6">
+                    <img src="https://img.icons8.com/color/48/iso.png" alt="ISO Certified" class="h-6 opacity-30 grayscale">
+                    <img src="https://img.icons8.com/color/48/safe-ok.png" alt="Safety Compliant" class="h-6 opacity-30 grayscale">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-[100] translate-x-full transition-transform duration-500 flex flex-col items-center justify-center space-y-8 p-10">
+        <button id="menu-close" class="absolute top-6 right-6 text-white text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="index.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="text-white text-3xl font-bold border-b-2 border-accent">About Us</a>
+        <a href="products.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Products</a>
+        <a href="contact.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Contact Us</a>
+        <a href="contact.html" class="bg-accent text-white px-8 py-3 rounded-lg font-bold text-xl">Request Quote</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Video Modal Handler
+        const videoTrigger = document.getElementById('video-trigger');
+        const videoModal = document.getElementById('video-modal');
+        const closeVideoBtn = document.getElementById('close-video');
+        const videoIframe = document.getElementById('video-iframe');
+
+        // YouTube Video ID (replace with your actual video)
+        const VIDEO_URL = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+
+        if (videoTrigger) {
+            videoTrigger.addEventListener('click', () => {
+                videoModal.classList.remove('hidden');
+                videoIframe.src = VIDEO_URL;
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (closeVideoBtn) {
+            closeVideoBtn.addEventListener('click', () => {
+                videoModal.classList.add('hidden');
+                videoIframe.src = '';
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Close modal when clicking outside the video
+        if (videoModal) {
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) {
+                    videoModal.classList.add('hidden');
+                    videoIframe.src = '';
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // Close with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+                videoModal.classList.add('hidden');
+                videoIframe.src = '';
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>
