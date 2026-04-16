@@ -59,14 +59,8 @@
                 <!-- Sidebar -->
                 <aside class="lg:w-64 flex-shrink-0" id="sidebar">
                     <div class="mb-6 lg:mb-6">
-                        <div class="flex items-center justify-between mb-3 lg:hidden">
-                            <p class="text-xs font-black uppercase tracking-[0.2em] text-gray-400">Categories</p>
-                            <button id="sidebar-toggle" class="text-primary text-lg">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div id="categories-list" class="lg:block">
-                            <p class="hidden lg:block text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-3">Categories</p>
+                        <p class="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-3">Categories</p>
+                        <div id="categories-list" class="block">
                             <ul class="space-y-0.5">
                                 <li><button class="cat-btn active w-full text-left px-4 py-2.5 rounded font-semibold text-sm flex items-center justify-between transition-colors" data-cat="all">All Products <span class="text-xs bg-gray-200 text-gray-600 rounded-full px-2 py-0.5 font-bold" id="count-all">38</span></button></li>
                                 <li><button class="cat-btn w-full text-left px-4 py-2.5 rounded text-sm flex items-center justify-between transition-colors hover:text-accent" data-cat="paper-mill">Paper Mill Products <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">7</span></button></li>
@@ -91,9 +85,8 @@
                     </div>
                 </aside>
 
-                <!-- Products Area -->
-                <div class="flex-1">
-                    <!-- Search Bar -->
+                <!-- Product Content -->
+                <div class="flex-1 order-1 lg:order-2">
                     <div class="mb-6 pb-4 border-b border-gray-100">
                         <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
                             <div class="flex-1 w-full lg:max-w-md">
@@ -104,10 +97,6 @@
                             </div>
                             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full lg:w-auto">
                                 <p class="text-sm text-gray-500">Showing <span class="font-bold text-primary" id="showing-count">38</span> of <span class="font-bold text-primary" id="total-count">38</span> products</p>
-                                <select class="text-sm font-semibold text-primary border border-gray-200 rounded px-3 py-1.5 bg-white focus:outline-none focus:border-accent w-full sm:w-auto">
-                                    <option>Newest First</option>
-                                    <option>Name A–Z</option>
-                                </select>
                             </div>
                         </div>
                     </div>
@@ -404,87 +393,5 @@
     </div>
 
     <script src="js/main.js"></script>
-    <script>
-        // ── Category Filter & Search ──
-        const catBtns = document.querySelectorAll('.cat-btn');
-        const productItems = document.querySelectorAll('.product-item');
-        const showingEl = document.getElementById('showing-count');
-        const totalEl = document.getElementById('total-count');
-        const noResults = document.getElementById('no-results');
-        const searchInput = document.getElementById('product-search');
-
-        let selectedCategory = 'all';
-        let searchQuery = '';
-
-        // Mobile sidebar toggle
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const categoriesList = document.getElementById('categories-list');
-
-        if (sidebarToggle && categoriesList) {
-            // Hide categories by default on mobile
-            if (window.innerWidth < 1024) {
-                categoriesList.classList.add('hidden');
-            }
-
-            sidebarToggle.addEventListener('click', () => {
-                categoriesList.classList.toggle('hidden');
-                const icon = sidebarToggle.querySelector('i');
-                if (categoriesList.classList.contains('hidden')) {
-                    icon.className = 'fa-solid fa-chevron-down';
-                } else {
-                    icon.className = 'fa-solid fa-chevron-up';
-                }
-            });
-        }
-
-        function updateProductDisplay() {
-            let count = 0;
-
-            productItems.forEach(item => {
-                const catMatch = selectedCategory === 'all' || item.dataset.cat === selectedCategory;
-                
-                // Get product name and description for search
-                const title = item.querySelector('h3')?.textContent.toLowerCase() || '';
-                const desc = item.querySelector('p:nth-of-type(2)')?.textContent.toLowerCase() || '';
-                const code = item.querySelector('p:first-of-type')?.textContent.toLowerCase() || '';
-                
-                const searchMatch = !searchQuery || title.includes(searchQuery.toLowerCase()) || 
-                                   desc.includes(searchQuery.toLowerCase()) || 
-                                   code.includes(searchQuery.toLowerCase());
-
-                if (catMatch && searchMatch) {
-                    item.classList.remove('hidden-item');
-                    count++;
-                } else {
-                    item.classList.add('hidden-item');
-                }
-            });
-
-            showingEl.textContent = count;
-            noResults.classList.toggle('hidden', count > 0);
-        }
-
-        // Category filter
-        catBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                catBtns.forEach(b => {
-                    b.classList.remove('active');
-                    b.style.backgroundColor = '';
-                    b.style.color = '';
-                });
-                btn.classList.add('active');
-                selectedCategory = btn.dataset.cat;
-                updateProductDisplay();
-            });
-        });
-
-        // Search filter
-        if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
-                searchQuery = e.target.value;
-                updateProductDisplay();
-            });
-        }
-    </script>
 </body>
 </html>
