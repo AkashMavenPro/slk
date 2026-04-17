@@ -58,29 +58,33 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-20 bg-primary overflow-hidden">
-        <div class="absolute inset-0 opacity-20 pointer-events-none bg-[url('images/hero.png')] bg-cover bg-center"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-white"></div>
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#f8fafc]">
+        <!-- Background Image with Light Shading -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/hero.jpeg" alt="Industrial Workshop" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+        </div>
 
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div class="max-w-2xl">
-                    <span class="inline-block px-3 py-1 bg-primary-light text-accent text-xs font-bold uppercase tracking-widest rounded mb-6">Since 1992</span>
-                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-                        Precision Engineering &amp; <br>
+                    <span class="inline-block px-3 py-1 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded mb-8">Since 1993</span>
+                    <h1 class="text-5xl sm:text-6xl lg:text-[5.5rem] font-extrabold text-primary leading-[1.1] mb-8">
+                        Precision <br>Engineering &amp; <br>
                         <span class="text-accent">Industrial Supply</span>
                     </h1>
-                    <p class="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed">Specializing in Casting, Fabrication, and Machining with surgical precision for heavy industrial applications worldwide.</p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="products.html" class="inline-flex items-center justify-center gap-2 px-7 py-3 bg-primary-dark rounded font-bold text-white hover:bg-accent transition-all duration-300">
-                            Explore Products <i class="fa-solid fa-arrow-right text-sm"></i>
+                    <p class="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed font-medium">
+                        Specializing in Casting, Fabrication, and Machining with surgical precision for heavy industrial applications worldwide.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="products.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary rounded font-bold text-white hover:bg-primary-light transition-all duration-300 text-sm shadow-xl shadow-primary/10">
+                            Explore Products <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
-                        <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-7 py-3 border-2 border-white/30 rounded font-bold text-white hover:bg-white/10 transition-all duration-300">
+                        <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 border border-gray-200 rounded font-bold text-primary hover:bg-gray-50 transition-all duration-300 bg-gray-100/50 backdrop-blur-sm text-sm">
                             Request a Quote
                         </a>
                     </div>
                 </div>
-               
             </div>
         </div>
     </section>
@@ -206,7 +210,7 @@
         <div class="container mx-auto px-4 md:px-8 flex flex-col lg:flex-row items-center gap-16">
             <div class="lg:w-1/2 relative">
                 <div class="rounded-3xl overflow-hidden shadow-2xl relative">
-                    <img src="product-image/MOULDING%201.jpg" alt="Casting Process" class="w-full h-[500px] object-cover">
+                    <img src="images/hero.jpeg" alt="Casting Process" class="w-full h-[500px] object-cover">
                     <div class="absolute inset-0 bg-accent/20 mix-blend-multiply"></div>
                 </div>
                 <!-- Mini Stats Overlay -->
