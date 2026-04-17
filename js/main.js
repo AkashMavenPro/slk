@@ -5,7 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
-    initScrollReveal();
     initStickyHeader();
     initSmoothScroll();
     initProductFilters();
@@ -109,34 +108,6 @@ function initMobileMenu() {
 }
 
 /**
- * Scroll Reveal Animations
- */
-function initScrollReveal() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                // Optional: stop observing once revealed
-                // observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    const revealElements = document.querySelectorAll('section, .reveal-item');
-    revealElements.forEach(el => {
-        if (!el.classList.contains('reveal')) {
-            el.classList.add('reveal');
-        }
-        observer.observe(el);
-    });
-}
-
-/**
  * Sticky Header Effect
  */
 function initStickyHeader() {
@@ -174,3 +145,4 @@ function initSmoothScroll() {
         });
     });
 }
+

@@ -6,7 +6,13 @@
   body {
     @apply text-primary font-sans bg-white;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display tracking-tight text-primary;
   }
 }
@@ -15,30 +21,24 @@
   .btn {
     @apply px-6 py-3 rounded-md font-semibold transition-all duration-300 inline-flex items-center justify-center;
   }
+
   .btn-primary {
     @apply bg-accent text-white hover:bg-accent-hover shadow-lg shadow-accent/20;
   }
+
   .btn-outline {
     @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
   }
+
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
   .nav-link {
     @apply text-primary-light hover:text-accent font-medium transition-colors;
   }
+
   .card {
     @apply bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100;
   }
-}
-
-/* Custom Scroll reveal classes */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
 }
