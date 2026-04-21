@@ -14,14 +14,7 @@
             body { font-family: 'Inter', sans-serif; }
             h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
         }
-        .contact-input {
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .contact-input:focus {
-            border-color: #f26522;
-            box-shadow: 0 0 0 3px rgba(242,101,34,0.1);
-        }
+
     </style>
 </head>
 <body class="bg-white text-primary">
@@ -40,9 +33,7 @@
                 <a href="contact.html" class="font-medium text-accent border-b-2 border-accent">Contact Us</a>
             </div>
 
-            <a href="contact.html" class="hidden md:block bg-accent text-white px-6 py-2.5 rounded hover:bg-accent-hover transition-all font-semibold text-sm">
-                Request a Quote
-            </a>
+
 
             <button class="md:hidden text-primary text-2xl" id="menu-toggle">
                 <i class="fa-solid fa-bars"></i>
@@ -50,154 +41,87 @@
         </nav>
     </header>
 
-    <!-- Contact Hero: Info Left + Form Right -->
-    <section class="pt-32 pb-16 bg-white">
-        <div class="container mx-auto px-4 md:px-8">
+    <!-- Contact Section -->
+    <section class="pt-32 pb-20 bg-white relative overflow-hidden">
+        <!-- Background Decoration -->
 
-            <!-- Page Label + Heading -->
-            <p class="text-xs font-black uppercase tracking-[0.25em] text-accent mb-4">Connect With Us</p>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-primary leading-tight mb-10">
-                Get in touch with our<br>engineering team.
-            </h1>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-
-                <!-- LEFT: Contact Info -->
-                <div class="space-y-8">
-
-                    <!-- Headquarters -->
-                    <div class="flex gap-4">
-                        <div class="mt-0.5 text-primary">
-                            <i class="fa-solid fa-location-dot text-lg"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-primary mb-1">Headquarters</h4>
-                            <p class="text-sm text-gray-500 leading-relaxed">
-                                Industrial Zone Sector 12,<br>
-                                Precision Hub, Suite 400,<br>
-                                Chennai, Tamil Nadu 600001
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Phone -->
-                    <div class="flex gap-4">
-                        <div class="mt-0.5 text-primary">
-                            <i class="fa-solid fa-phone text-lg"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-primary mb-1">Phone</h4>
-                            <p class="text-sm text-gray-500 leading-relaxed">
-                                Main Office: +91 44 2835 0500<br>
-                                Sales: +91 98400 72345
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="flex gap-4">
-                        <div class="mt-0.5 text-primary">
-                            <i class="fa-solid fa-envelope text-lg"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-primary mb-1">Email</h4>
-                            <p class="text-sm text-gray-500 leading-relaxed">
-                                General: info@slktraders.com<br>
-                                Support: help@slktraders.com
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Technical Assistance Card -->
-                    <div class="border-l-4 border-accent bg-surface-muted pl-5 py-4 pr-4 rounded-r-xl">
-                        <h4 class="font-bold text-primary text-sm mb-1">Technical Assistance</h4>
-                        <p class="text-xs text-gray-500 leading-relaxed">
-                            Our engineers are available Monday to Friday,<br>
-                            8:00 AM – 6:00 PM IST for specialist<br>
-                            technical guidance.
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                
+                <!-- Contact Info -->
+                <div class="space-y-16 text-center">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-widest rounded mb-6">Expert Assistance</span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight mb-6">
+                            Let’s discuss your <span class="text-accent">technical requirements.</span>
+                        </h1>
+                        <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                            Our engineering specialists are ready to provide technical guidance and custom solutions for your industrial needs.
                         </p>
                     </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 bg-gray-50/50 p-8 md:p-12 rounded-[2rem] border border-gray-100">
+                        <!-- Headquarters -->
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white mx-auto shadow-lg shadow-primary/20">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-primary">Headquarters</h4>
+                            <p class="text-base text-gray-500 leading-relaxed">
+                                123 Industrial Estate, Block B,<br>
+                                Engineering Hub, CIP 560001
+                            </p>
+                        </div>
+
+                        <!-- Communication -->
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-white mx-auto shadow-lg shadow-accent/20">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-primary">Communication</h4>
+                            <p class="text-base text-gray-500 leading-relaxed font-medium">
+                                +91 (800) 245-0900<br>
+                                info@slktraders.com
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-8 border-t border-gray-100 flex flex-wrap items-center justify-center gap-8 md:gap-16">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center text-green-600 shadow-sm">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <span class="text-sm font-bold text-gray-600">8:00 AM – 6:00 PM IST</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 shadow-sm">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <span class="text-sm font-bold text-gray-600">Engineering Support</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- RIGHT: Contact Form -->
-                <div>
-                    <form action="#" class="space-y-4">
-                        <!-- Row 1: Full Name + Company -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Full Name</label>
-                                <input type="text" placeholder="John Doe"
-                                    class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm">
-                            </div>
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Company</label>
-                                <input type="text" placeholder="Industrial Corp"
-                                    class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm">
-                            </div>
-                        </div>
-
-                        <!-- Row 2: Phone + Email -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Phone</label>
-                                <input type="tel" placeholder="+91 98000 00000"
-                                    class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm">
-                            </div>
-                            <div class="space-y-1">
-                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Email</label>
-                                <input type="email" placeholder="john@example.com"
-                                    class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm">
-                            </div>
-                        </div>
-
-                        <!-- Category of Interest -->
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Category of Interest</label>
-                            <select class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm text-gray-700">
-                                <option>Precision Machining</option>
-                                <option>Paper Mill Components</option>
-                                <option>Boiler Systems</option>
-                                <option>Power Plant Parts</option>
-                                <option>Agriculture Equipment</option>
-                                <option>General Casting</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-
-                        <!-- Message -->
-                        <div class="space-y-1">
-                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Message</label>
-                            <textarea rows="5" placeholder="How can we assist with your project?"
-                                class="contact-input w-full px-4 py-2.5 bg-white border border-gray-300 rounded text-sm resize-none"></textarea>
-                        </div>
-
-                        <!-- Submit -->
-                        <button type="submit"
-                            class="w-full bg-primary text-white py-3 rounded font-bold text-sm hover:bg-primary-light transition-all flex items-center justify-center gap-2">
-                            Submit Inquiry <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </form>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Live Location / Map Section -->
-    <section class="py-16 bg-surface-muted">
-        <div class="container mx-auto px-4 md:px-8 flex justify-center">
-            <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-8 text-center max-w-sm w-full">
-                <!-- Icon -->
-                <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-building-location text-accent text-2xl"></i>
-                </div>
-                <h3 class="text-lg font-extrabold text-primary mb-2">Live Location Data</h3>
-                <p class="text-xs text-gray-500 mb-5 leading-relaxed">Interactive mapping component will be rendered here for real-time navigation.</p>
-                <!-- Map Placeholder Image -->
-                <div class="w-full h-36 bg-gray-200 rounded-xl overflow-hidden relative">
-                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <i class="fa-solid fa-location-pin text-accent text-3xl drop-shadow"></i>
-                    </div>
+    <!-- Map Section (Compact) -->
+    <section class="py-12 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="bg-surface-muted rounded-[2rem] overflow-hidden h-[400px] relative border border-gray-100">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.5!2d77.6!3d12.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzAwLjAiTiA3N8KwMzYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                    width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" allowfullscreen="" loading="lazy"></iframe>
+                <div class="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-xs">
+                    <h4 class="font-bold text-primary mb-2">Visit Our Works</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-4">Located in the heart of the Engineering District, easily accessible from the main highway.</p>
+                    <a href="https://goo.gl/maps" target="_blank" class="text-xs font-bold text-accent flex items-center gap-2 hover:underline">
+                        Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -212,10 +136,7 @@
             <p class="text-sm text-gray-400 mb-8">
                 Partner with SLK Traders for unrivalled precision and reliability in industrial supplies.
             </p>
-            <a href="#" onclick="document.querySelector('form').scrollIntoView({behavior:'smooth'}); return false;"
-                class="inline-block bg-accent text-white px-8 py-3 rounded font-bold text-sm hover:bg-accent-hover transition-all">
-                Get a Professional Quote Today
-            </a>
+
         </div>
     </section>
 
@@ -278,7 +199,7 @@
         <a href="about.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">About Us</a>
         <a href="products.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Products</a>
         <a href="contact.html" class="text-white text-3xl font-bold border-b-2 border-accent">Contact Us</a>
-        <a href="contact.html" class="bg-accent text-white px-8 py-3 rounded-lg font-bold text-xl">Request Quote</a>
+
     </div>
 
     <script src="js/main.js"></script>
