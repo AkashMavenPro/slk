@@ -4,11 +4,100 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initSiteProtection();
     initMobileMenu();
     initStickyHeader();
     initSmoothScroll();
     initProductFilters();
+    initImageProtection();
 });
+
+/**
+ * Site-wide protection: disables right-click, drag, and save shortcuts on every page
+ */
+function initSiteProtection() {
+    // Block right-click everywhere on the site
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // Block image drag on all images across every page
+    document.addEventListener('dragstart', e => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+
+    // Block Ctrl+S (save), Ctrl+U (view source), Ctrl+P (print)
+    document.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && ['s', 'u', 'p'].includes(e.key.toLowerCase())) {
+            e.preventDefault();
+        }
+    });
+
+    // Make all images non-draggable
+    document.querySelectorAll('img').forEach(img => {
+        img.setAttribute('draggable', 'false');
+    });
+}
+
+/**
+ * Product image protection: canvas watermarking (products.html only)
+ */
+function initImageProtection() {
+    const grid = document.getElementById('product-grid');
+    if (!grid) return;
+
+    const logo = new Image();
+    logo.onload = () => {
+        grid.querySelectorAll('.product-img').forEach(img => {
+            if (img.complete && img.naturalWidth > 0) {
+                renderWatermarkedCanvas(img, logo);
+            } else {
+                img.addEventListener('load', () => renderWatermarkedCanvas(img, logo), { once: true });
+            }
+        });
+    };
+    logo.src = 'images/logo.png';
+}
+
+function renderWatermarkedCanvas(img, logo) {
+    const wrapper = img.parentElement;
+    if (!wrapper) return;
+
+    const canvas = document.createElement('canvas');
+    canvas.className = img.className;
+    canvas.style.cssText = 'width:100%;height:100%;display:block;';
+
+    const w = wrapper.clientWidth  || img.offsetWidth  || 300;
+    const h = wrapper.clientHeight || img.offsetHeight || 300;
+    canvas.width  = w;
+    canvas.height = h;
+
+    const ctx = canvas.getContext('2d');
+    drawCover(ctx, img, 0, 0, w, h);
+
+    const logoSize = Math.round(Math.min(w, h) * 0.38);
+    const lx = Math.round((w - logoSize) / 2);
+    const ly = Math.round((h - logoSize) / 2);
+    ctx.globalAlpha = 0.22;
+    ctx.drawImage(logo, lx, ly, logoSize, logoSize);
+    ctx.globalAlpha = 1;
+
+    canvas.addEventListener('contextmenu', e => e.preventDefault());
+    canvas.setAttribute('draggable', 'false');
+
+    wrapper.replaceChild(canvas, img);
+}
+
+// Replicates CSS object-fit:cover for canvas drawImage
+function drawCover(ctx, src, x, y, w, h) {
+    const iw = src.naturalWidth;
+    const ih = src.naturalHeight;
+    if (!iw || !ih) { ctx.drawImage(src, x, y, w, h); return; }
+    const scale = Math.max(w / iw, h / ih);
+    const sw = w / scale;
+    const sh = h / scale;
+    const sx = (iw - sw) / 2;
+    const sy = (ih - sh) / 2;
+    ctx.drawImage(src, sx, sy, sw, sh, x, y, w, h);
+}
 
 /**
  * Product filters and search (products.html only)
@@ -87,7 +176,7 @@ function initMobileMenu() {
 
     toggle.addEventListener('click', () => {
         menu.classList.remove('translate-x-full');
-        document.body.style.overflow = 'hidden'; // Prevent scroll
+        document.body.style.overflow = 'hidden';
     });
 
     if (close) {
@@ -97,7 +186,6 @@ function initMobileMenu() {
         });
     }
 
-    // Close menu when clicking on a link
     const menuLinks = menu.querySelectorAll('a');
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -134,15 +222,11 @@ function initSmoothScroll() {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const target = document.querySelector(targetId);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
 }
-
