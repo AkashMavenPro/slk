@@ -29,6 +29,7 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
                 <a href="about.html" class="font-medium hover:text-accent transition-colors">About Us</a>
+                <a href="infrastructure.html" class="font-medium hover:text-accent transition-colors">Infrastructure</a>
                 <a href="products.html" class="font-medium hover:text-accent transition-colors">Products</a>
                 <a href="contact.html" class="font-medium text-accent border-b-2 border-accent">Contact Us</a>
             </div>
@@ -127,65 +128,70 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary">
-        <div class="container mx-auto px-4 md:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-3">
-                Ready to start your next<br>engineering masterpiece?
-            </h2>
-            <p class="text-sm text-gray-400 mb-8">
-                Partner with SLK Traders for unrivalled precision and reliability in industrial supplies.
-            </p>
 
-        </div>
-    </section>
 
     <!-- Footer -->
-    <footer class="bg-white pt-12 pb-8 border-t border-gray-200">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-
-                <!-- Brand -->
-                <div class="space-y-4">
-                    <a href="index.html" class="flex items-center">
-                        <img src="images/logo.png" alt="SLK Traders" class="h-8 w-auto">
-                    </a>
-                    <p class="text-xs text-gray-500 leading-relaxed">Supplying the backbone of modern industry with precision-engineered components and global logistics.</p>
-                </div>
-
-                <!-- Solutions -->
-                <div class="space-y-4">
-                    <h4 class="text-xs font-black uppercase tracking-widest text-primary">Solutions</h4>
-                    <ul class="space-y-2">
-                        <li><a href="products.html" class="text-xs text-gray-500 hover:text-accent transition-colors">Machine Components</a></li>
-                        <li><a href="products.html" class="text-xs text-gray-500 hover:text-accent transition-colors">Metal Fabrication</a></li>
-                        <li><a href="products.html" class="text-xs text-gray-500 hover:text-accent transition-colors">Supply Chain</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources -->
-                <div class="space-y-4">
-                    <h4 class="text-xs font-black uppercase tracking-widest text-primary">Resources</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Sitemap</a></li>
-                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Compliance</a></li>
-                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Technical Data</a></li>
-                    </ul>
-                </div>
-
-                <!-- Legal -->
-                <div class="space-y-4">
-                    <h4 class="text-xs font-black uppercase tracking-widest text-primary">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-xs text-gray-500 hover:text-accent transition-colors">Terms of Service</a></li>
-                    </ul>
+    <footer class="bg-primary pt-20 pb-10 border-t border-white/10">
+        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="space-y-6">
+                <a href="index.html" class="inline-block bg-white rounded-lg px-3 py-2">
+                    <img src="images/logo.png" alt="SLK Traders" class="h-7 w-auto">
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed">Precision-engineered solutions for the world's most demanding industrial sectors. From casting to delivery.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
             </div>
 
-            <!-- Bottom Bar -->
-            <div class="pt-6 border-t border-gray-100">
-                <p class="text-xs text-gray-400">© 2024 SLK TRADERS. Precision Engineering</p>
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Privacy Policy</a></li>
+                    <li><a href="about.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Terms of Service</a></li>
+                    <li><a href="contact.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Compliance</a></li>
+                    <li><a href="contact.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Products</h4>
+                <ul class="space-y-3">
+                    <li><a href="products.html?cat=paper-mill" class="text-sm text-gray-400 hover:text-accent transition-colors">Paper Mill Products</a></li>
+                    <li><a href="products.html?cat=power-plant" class="text-sm text-gray-400 hover:text-accent transition-colors">Power Plant Spares</a></li>
+                    <li><a href="products.html?cat=pipeline" class="text-sm text-gray-400 hover:text-accent transition-colors">Pipeline &amp; Fittings</a></li>
+                    <li><a href="products.html?cat=boiler-spares" class="text-sm text-gray-400 hover:text-accent transition-colors">Boiler Spares (ABL &amp; IJT)</a></li>
+                    <li><a href="products.html?cat=general-castings" class="text-sm text-gray-400 hover:text-accent transition-colors">General Castings &amp; Fabrication</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Contact</h4>
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <i class="fa-solid fa-location-dot text-accent mt-1"></i>
+                        <p class="text-sm text-gray-400">123 Industrial Estate, Block B,<br>Engineering Hub, CIP 560001</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fa-solid fa-phone text-accent mt-1"></i>
+                        <p class="text-sm text-gray-400">+91 (800) 245-0900</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fa-solid fa-envelope text-accent mt-1"></i>
+                        <p class="text-sm text-gray-400">info@slktraders.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 pt-8 border-t border-white/10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-500">© 2024 SLK TRADERS. Industrial Engineering Excellence Since 1992.</p>
+                <div class="flex gap-6">
+                    <img src="https://img.icons8.com/color/48/iso.png" alt="ISO Certified" class="h-6">
+                    <img src="https://img.icons8.com/color/48/safe-ok.png" alt="Safety Compliant" class="h-6">
+                </div>
             </div>
         </div>
     </footer>
@@ -197,6 +203,7 @@
         </button>
         <a href="index.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Home</a>
         <a href="about.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">About Us</a>
+        <a href="infrastructure.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Infrastructure</a>
         <a href="products.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Products</a>
         <a href="contact.html" class="text-white text-3xl font-bold border-b-2 border-accent">Contact Us</a>
 

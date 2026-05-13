@@ -307,9 +307,14 @@ function initProductFilters() {
     const pageDesc = document.getElementById('page-desc');
 
     if (!showingEl || !totalEl || !noResults || productItems.length === 0) return;
+    
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreContainer = document.getElementById('load-more-container');
 
     let selectedCategory = 'all';
     let searchQuery = '';
+    let visibleCount = 6;
+    const itemsPerPage = 6;
 
     const defaultTitle = "Industrial Components";
     const defaultDesc = "Discover our range of high-performance technical parts designed for extreme durability and precise operational standards.";
@@ -363,7 +368,8 @@ function initProductFilters() {
     }
 
     function updateProductDisplay() {
-        let count = 0;
+        let matchCount = 0;
+        let shownCount = 0;
 
         productItems.forEach(item => {
             const catMatch = selectedCategory === 'all' || item.dataset.cat === selectedCategory;
@@ -375,16 +381,41 @@ function initProductFilters() {
                 code.includes(searchQuery.toLowerCase());
 
             if (catMatch && searchMatch) {
-                item.classList.remove('hidden-item');
-                count++;
+                matchCount++;
+                if (shownCount < visibleCount) {
+                    item.classList.remove('hidden-item');
+                    shownCount++;
+                } else {
+                    item.classList.add('hidden-item');
+                }
             } else {
                 item.classList.add('hidden-item');
             }
         });
 
-        showingEl.textContent = count;
-        totalEl.textContent = productItems.length;
-        noResults.classList.toggle('hidden', count > 0);
+        // Update status text
+        showingEl.textContent = shownCount;
+        totalEl.textContent = matchCount;
+
+        // Show/Hide No Results
+        noResults.classList.toggle('hidden', matchCount > 0);
+
+        // Show/Hide Load More Button
+        if (loadMoreContainer) {
+            if (matchCount > visibleCount) {
+                loadMoreContainer.classList.remove('hidden');
+            } else {
+                loadMoreContainer.classList.add('hidden');
+            }
+        }
+    }
+
+    // Load More click handler
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            visibleCount += itemsPerPage;
+            updateProductDisplay();
+        });
     }
 
     catBtns.forEach(btn => {
@@ -396,6 +427,7 @@ function initProductFilters() {
             });
             btn.classList.add('active');
             selectedCategory = btn.dataset.cat;
+            visibleCount = itemsPerPage; // Reset pagination
             updateProductDisplay();
             updateCategoryDetails(selectedCategory);
         });
@@ -404,6 +436,7 @@ function initProductFilters() {
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             searchQuery = e.target.value;
+            visibleCount = itemsPerPage; // Reset pagination
             updateProductDisplay();
         });
     }

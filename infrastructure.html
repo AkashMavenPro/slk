@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure | SLK Traders - State-of-the-Art Manufacturing</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @layer base {
+            body { font-family: 'Inter', sans-serif; }
+            h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+        }
+        .infra-card:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-white text-primary">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <nav class="container mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="SLK Traders" class="h-10 w-auto">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                <a href="about.html" class="font-medium hover:text-accent transition-colors">About Us</a>
+                <a href="infrastructure.html" class="font-medium text-accent border-b-2 border-accent">Infrastructure</a>
+                <a href="products.html" class="font-medium hover:text-accent transition-colors">Products</a>
+                <a href="contact.html" class="font-medium hover:text-accent transition-colors">Contact Us</a>
+            </div>
+
+            <button class="md:hidden text-primary text-2xl" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="relative pt-40 pb-24 bg-primary overflow-hidden">
+        <div class="absolute inset-0 opacity-20 pointer-events-none bg-[url('SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/MOULDING.jpg')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-transparent"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl space-y-6">
+                <span class="inline-block px-3 py-1 bg-accent/20 text-accent text-xs font-bold uppercase tracking-widest rounded">Manufacturing Excellence</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white">
+                    Our <span class="text-accent">Infrastructure.</span>
+                </h1>
+                <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
+                    Equipped with state-of-the-art machinery and a 50,000 sq. ft. combined facility, we provide end-to-end manufacturing solutions from casting to final precision machining.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8 space-y-24">
+
+            <!-- Casting Set up -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative order-2 lg:order-1">
+                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
+                        <img src="SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/CUPOLO%20FURNACE.jpg" alt="Casting Setup" class="w-full h-[500px] object-cover transition-transform duration-700">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent rounded-3xl -z-10"></div>
+                </div>
+                <div class="space-y-8 order-1 lg:order-2">
+                    <h2 class="text-4xl font-extrabold text-primary">Casting Set Up</h2>
+                    <div class="space-y-4">
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">CUPOLA FURNACE OF 5 TONNES/HR.</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">Arc furnace of 1 tonnes</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">SINGLE PIECE CASTING CAPACITY OF 1.5 TONNES</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">OVER HEAD CRANE OF 10 TONNES CAPACITY FOR MOULDING</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fabrication Set up -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl font-extrabold text-primary">Fabrication Set Up</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">HYDRAULIC PRESS</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">HEAT CHAMBER</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">MIG Welding Machine of Auto Capacity</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Arc Welding Machine</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Manual Gas Cutting Machine</span></li>
+                        </ul>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Own Die Tools arrangement</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">5 Angular Grinding Machine</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">5 Surface Grinding Machine</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">10 Tonnes capacity overhead crane</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
+                        <img src="SLK-IMG/INFRA/INFRA-FABRICATION/HEAT%20CHAMBER.jpg" alt="Fabrication Setup" class="w-full h-[500px] object-cover transition-transform duration-700">
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+
+            <!-- Machine Shop Set up -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative order-2 lg:order-1">
+                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
+                        <img src="SLK-IMG/INFRA/INFRA-%20PATTERN%20SHOP/PATTERN%20SHOP%20.jpg" alt="Machine Shop" class="w-full h-[500px] object-cover transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="space-y-8 order-1 lg:order-2">
+                    <h2 class="text-4xl font-extrabold text-primary">Machine Shop Set Up</h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">Capacity for fully machining of all items from 60" size & 20ft length</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">5 Lathe machines</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">2 Radial Drilling Units</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Shaping machine</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Planner machine</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Milling machine</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Quality Control & Warehouse -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Quality Control -->
+                <div class="bg-surface-muted p-12 rounded-[2.5rem] border border-gray-100">
+                    <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg">
+                        <i class="fa-solid fa-microscope text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-primary mb-6">Quality Control Set Up</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">5 Hydraulic pressure testing machine capacity</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">UTS MACHINE (Tensile Strength)</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">CHEMICAL COMPOSITION TESTING</span></li>
+                    </ul>
+                </div>
+
+                <!-- Warehousing -->
+                <div class="bg-primary p-12 rounded-[2.5rem] shadow-xl shadow-primary/20">
+                    <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg">
+                        <i class="fa-solid fa-warehouse text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-white mb-6">Ware House Set Up</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-300">20,000 sq ft area for warehousing</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-300">Overhead crane for loading & unloading</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Raw Material Stores -->
+            <div class="bg-surface-muted p-12 rounded-[2.5rem] border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-extrabold text-primary mb-8">Raw Material Stores Set Up</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div class="space-y-6">
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                We maintain a massive inventory of raw materials to ensure uninterrupted production and rapid fulfillment of large orders.
+                            </p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">15,000 sq ft area for raw material stocking.</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">BEST RAW MATERIAL used (PIG IRON OF TATA, PLATES OF TATA, JINDAL, SAIL).</span></li>
+                            </ul>
+                        </div>
+                        <div class="rounded-3xl overflow-hidden h-64">
+                            <img src="SLK-IMG/INFRA/WAREHOUSE-INFRA/WAREHOUSE.jpg" alt="Raw Material Store" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary pt-20 pb-10 border-t border-white/10">
+        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="space-y-6">
+                <a href="index.html" class="inline-block bg-white rounded-lg px-3 py-2">
+                    <img src="images/logo.png" alt="SLK Traders" class="h-7 w-auto">
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed">Precision-engineered solutions for the world's most demanding industrial sectors. From casting to delivery.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Privacy Policy</a></li>
+                    <li><a href="about.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Terms of Service</a></li>
+                    <li><a href="contact.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Compliance</a></li>
+                    <li><a href="contact.html" class="text-sm text-gray-400 hover:text-accent transition-colors">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Products</h4>
+                <ul class="space-y-3">
+                    <li><a href="products.html?cat=paper-mill" class="text-sm text-gray-400 hover:text-accent transition-colors">Paper Mill Products</a></li>
+                    <li><a href="products.html?cat=power-plant" class="text-sm text-gray-400 hover:text-accent transition-colors">Power Plant Spares</a></li>
+                    <li><a href="products.html?cat=pipeline" class="text-sm text-gray-400 hover:text-accent transition-colors">Pipeline & Fittings</a></li>
+                    <li><a href="products.html?cat=boiler-spares" class="text-sm text-gray-400 hover:text-accent transition-colors">Boiler Spares (ABL & IJT)</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-white uppercase tracking-widest text-sm">Contact</h4>
+                <div class="space-y-4">
+                    <div class="flex gap-3"><i class="fa-solid fa-location-dot text-accent mt-1"></i><p class="text-sm text-gray-400">123 Industrial Estate, Block B,<br>Engineering Hub, CIP 560001</p></div>
+                    <div class="flex gap-3"><i class="fa-solid fa-phone text-accent mt-1"></i><p class="text-sm text-gray-400">+91 (800) 245-0900</p></div>
+                    <div class="flex gap-3"><i class="fa-solid fa-envelope text-accent mt-1"></i><p class="text-sm text-gray-400">info@slktraders.com</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 pt-8 border-t border-white/10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-500">© 2024 SLK TRADERS. Industrial Engineering Excellence Since 1992.</p>
+                <div class="flex gap-6">
+                    <img src="https://img.icons8.com/color/48/iso.png" alt="ISO Certified" class="h-6">
+                    <img src="https://img.icons8.com/color/48/safe-ok.png" alt="Safety Compliant" class="h-6">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-[100] translate-x-full transition-transform duration-500 flex flex-col items-center justify-center space-y-8 p-10">
+        <button id="menu-close" class="absolute top-6 right-6 text-white text-3xl"><i class="fa-solid fa-xmark"></i></button>
+        <a href="index.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">About Us</a>
+        <a href="infrastructure.html" class="text-white text-3xl font-bold border-b-2 border-accent">Infrastructure</a>
+        <a href="products.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Products</a>
+        <a href="contact.html" class="text-white/80 text-3xl font-bold hover:text-accent transition-colors">Contact Us</a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
