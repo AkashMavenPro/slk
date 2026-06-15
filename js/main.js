@@ -4,38 +4,12 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initSiteProtection();
     initMobileMenu();
     initStickyHeader();
     initSmoothScroll();
     initProductFilters();
     initImageProtection();
 });
-
-/**
- * Site-wide protection: disables right-click, drag, and save shortcuts on every page
- */
-function initSiteProtection() {
-    // Block right-click everywhere on the site
-    document.addEventListener('contextmenu', e => e.preventDefault());
-
-    // Block image drag on all images across every page
-    document.addEventListener('dragstart', e => {
-        if (e.target.tagName === 'IMG') e.preventDefault();
-    });
-
-    // Block Ctrl+S (save), Ctrl+U (view source), Ctrl+P (print)
-    document.addEventListener('keydown', e => {
-        if ((e.ctrlKey || e.metaKey) && ['s', 'u', 'p'].includes(e.key.toLowerCase())) {
-            e.preventDefault();
-        }
-    });
-
-    // Make all images non-draggable
-    document.querySelectorAll('img').forEach(img => {
-        img.setAttribute('draggable', 'false');
-    });
-}
 
 /**
  * Product image protection: canvas watermarking (products.html only)
@@ -80,7 +54,6 @@ function renderWatermarkedCanvas(img, logo) {
     ctx.drawImage(logo, lx, ly, logoSize, logoSize);
     ctx.globalAlpha = 1;
 
-    canvas.addEventListener('contextmenu', e => e.preventDefault());
     canvas.setAttribute('draggable', 'false');
 
     wrapper.replaceChild(canvas, img);
