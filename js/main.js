@@ -239,18 +239,6 @@ const categoryData = {
             title: 'Custom Manufacturing Solutions',
             content: 'We provide tailor-made agricultural castings and components based on client specifications, ensuring reliable performance and application-specific engineering for agricultural and irrigation industries.'
         }
-    },
-    'custom': {
-        title: 'Custom Manufacturing',
-        description: 'We specialize in providing end-to-end manufacturing solutions tailored to your specific engineering requirements. Whether it\'s a complex casting, a precision-machined component, or a large-scale industrial fabrication, our team has the expertise to deliver as per your exact drawings.',
-        details: 'Our facility is equipped with advanced foundry and machining infrastructure, allowing us to handle diverse materials including Cast Iron, Carbon Steel, Stainless Steel, and Non-Ferrous alloys. We work closely with our clients from design validation to final quality inspection.',
-        majorProducts: [
-            'As Per Drawing Manufacturing',
-            'Design Support Services',
-            'Prototype Development',
-            'Specialized Industrial Components',
-            'Full In-House Production'
-        ]
     }
 };
 

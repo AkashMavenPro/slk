@@ -5,14 +5,14 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0a111f', // Deep Navy
-          light: '#1e293b',
-          dark: '#020617',
+          DEFAULT: '#0c4a8c', // Standard Blue
+          light: '#1d6fc2',
+          dark: '#073461',
         },
         accent: {
-          DEFAULT: '#f26522', // Burnt Orange
-          hover: '#ea580c',
-          light: '#feddce',
+          DEFAULT: '#1d8fe1', // Sky Blue
+          hover: '#1372ba',
+          light: '#dbeefd',
         },
         surface: {
           DEFAULT: '#f8fafc',
