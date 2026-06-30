@@ -5,14 +5,14 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0c4a8c', // Standard Blue
-          light: '#1d6fc2',
-          dark: '#073461',
+          DEFAULT: '#003F88', // Navy Blue (Engineering & Precision Palette)
+          light: '#1b5fad',
+          dark: '#00264f',
         },
         accent: {
-          DEFAULT: '#1d8fe1', // Sky Blue
-          hover: '#1372ba',
-          light: '#dbeefd',
+          DEFAULT: '#00A2E3', // Electric Blue
+          hover: '#0089c2',
+          light: '#dff4fc',
         },
         surface: {
           DEFAULT: '#f8fafc',

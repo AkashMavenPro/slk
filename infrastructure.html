@@ -15,6 +15,8 @@
             h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
         }
         .infra-card:hover img { transform: scale(1.05); }
+        .gallery-thumb { cursor: zoom-in; }
+        #lightbox.active { display: flex; }
     </style>
 </head>
 <body class="bg-white text-primary">
@@ -44,7 +46,7 @@
     <section class="relative pt-40 pb-24 bg-primary overflow-hidden">
         <div class="absolute inset-0 opacity-20 pointer-events-none bg-[url('SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/MOULDING.jpg')] bg-cover bg-center"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-transparent"></div>
-        
+
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="max-w-3xl space-y-6">
                 <span class="inline-block px-3 py-1 bg-accent/20 text-accent text-xs font-bold uppercase tracking-widest rounded">Manufacturing Excellence</span>
@@ -58,21 +60,37 @@
         </div>
     </section>
 
+    <!-- Category Quick Nav -->
+    <nav class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex items-center gap-6 overflow-x-auto py-4 text-sm font-bold text-gray-500 no-scrollbar">
+                <a href="#casting" class="hover:text-accent whitespace-nowrap transition-colors">Casting &amp; Moulding</a>
+                <a href="#pattern-shop" class="hover:text-accent whitespace-nowrap transition-colors">Pattern Shop</a>
+                <a href="#fabrication" class="hover:text-accent whitespace-nowrap transition-colors">Fabrication</a>
+                <a href="#machine-shop" class="hover:text-accent whitespace-nowrap transition-colors">Machine Shop</a>
+                <a href="#quality-control" class="hover:text-accent whitespace-nowrap transition-colors">Quality Control</a>
+                <a href="#testing" class="hover:text-accent whitespace-nowrap transition-colors">Testing Facility</a>
+                <a href="#warehouse" class="hover:text-accent whitespace-nowrap transition-colors">Warehouse</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Main Content -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-4 md:px-8 space-y-24">
 
-            <!-- Casting Set up -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative order-2 lg:order-1">
-                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
-                        <img src="SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/CUPOLO%20FURNACE.jpg" alt="Casting Setup" class="w-full h-[260px] sm:h-[360px] md:h-[500px] object-cover transition-transform duration-700">
+            <!-- Casting & Moulding -->
+            <div id="casting" class="scroll-mt-32 space-y-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative order-2 lg:order-1">
+                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
+                            <img src="SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/CUPOLO%20FURNACE.jpg" alt="Casting Setup" class="w-full h-[260px] sm:h-[360px] md:h-[500px] object-cover transition-transform duration-700 gallery-thumb">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent rounded-3xl -z-10"></div>
                     </div>
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent rounded-3xl -z-10"></div>
-                </div>
-                <div class="space-y-8 order-1 lg:order-2">
-                    <h2 class="text-4xl font-extrabold text-primary">Casting Set Up</h2>
-                    <div class="space-y-4">
+                    <div class="space-y-8 order-1 lg:order-2">
+                        <span class="text-accent font-bold uppercase tracking-widest text-sm">Foundry</span>
+                        <h2 class="text-4xl font-extrabold text-primary">Casting &amp; Moulding Set Up</h2>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">CUPOLA FURNACE OF 5 TONNES/HR.</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">Arc furnace of 1 tonnes</span></li>
@@ -81,120 +99,176 @@
                         </ul>
                     </div>
                 </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/MOULDING.jpg" alt="Moulding" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/MOULDING%20OT%20CRANE%20CAPACITY.jpg" alt="Moulding Overhead Crane" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/MC1.jpg" alt="Moulding Capacity" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/CUPOLO%20FURNACE.jpg" alt="Cupola Furnace" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                </div>
             </div>
 
-            <!-- Fabrication Set up -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Pattern Shop -->
+            <div id="pattern-shop" class="scroll-mt-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
-                    <h2 class="text-4xl font-extrabold text-primary">Fabrication Set Up</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">HYDRAULIC PRESS</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">HEAT CHAMBER</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">MIG Welding Machine of Auto Capacity</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Arc Welding Machine</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Manual Gas Cutting Machine</span></li>
-                        </ul>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Own Die Tools arrangement</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">5 Angular Grinding Machine</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">5 Surface Grinding Machine</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">10 Tonnes capacity overhead crane</span></li>
-                        </ul>
-                    </div>
+                    <span class="text-accent font-bold uppercase tracking-widest text-sm">In-House Tooling</span>
+                    <h2 class="text-4xl font-extrabold text-primary">Pattern Shop Set Up</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Our dedicated pattern shop designs and manufactures wooden &amp; metal patterns in-house, ensuring tight dimensional accuracy and faster turnaround for every casting job.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">In-house pattern design &amp; fabrication</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">Custom patterns as per customer drawings</span></li>
+                    </ul>
                 </div>
                 <div class="relative">
                     <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
-                        <img src="SLK-IMG/INFRA/INFRA-FABRICATION/HEAT%20CHAMBER.jpg" alt="Fabrication Setup" class="w-full h-[260px] sm:h-[360px] md:h-[500px] object-cover transition-transform duration-700">
+                        <img src="SLK-IMG/INFRA/INFRA-%20PATTERN%20SHOP/PATTERN%20SHOP%20.jpg" alt="Pattern Shop" class="w-full h-[260px] sm:h-[360px] md:h-[500px] object-cover transition-transform duration-700 gallery-thumb">
                     </div>
                     <div class="absolute -top-6 -left-6 w-32 h-32 bg-primary/5 rounded-full blur-3xl -z-10"></div>
                 </div>
             </div>
 
-            <!-- Machine Shop Set up -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative order-2 lg:order-1">
-                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
-                        <img src="SLK-IMG/INFRA/INFRA-%20PATTERN%20SHOP/PATTERN%20SHOP%20.jpg" alt="Machine Shop" class="w-full h-[260px] sm:h-[360px] md:h-[500px] object-cover transition-transform duration-700">
+            <!-- Fabrication Set up -->
+            <div id="fabrication" class="scroll-mt-32 space-y-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <span class="text-accent font-bold uppercase tracking-widest text-sm">Fabrication</span>
+                        <h2 class="text-4xl font-extrabold text-primary">Fabrication Set Up</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">HYDRAULIC PRESS</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">HEAT CHAMBER</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">MIG Welding Machine of Auto Capacity</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Arc Welding Machine</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Manual Gas Cutting Machine</span></li>
+                            </ul>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Own Die Tools arrangement</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">5 Angular Grinding Machine</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">5 Surface Grinding Machine</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">10 Tonnes capacity overhead crane</span></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="space-y-8 order-1 lg:order-2">
-                    <h2 class="text-4xl font-extrabold text-primary">Machine Shop Set Up</h2>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">Capacity for fully machining of all items from 60" size & 20ft length</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">5 Lathe machines</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">2 Radial Drilling Units</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Shaping machine</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Planner machine</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Milling machine</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Machinery & Equipment Gallery -->
-            <div>
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <span class="text-accent font-bold uppercase tracking-widest text-sm mb-3 block">Inside Our Facility</span>
-                    <h2 class="text-4xl font-extrabold text-primary">Machinery &amp; Equipment</h2>
-                    <p class="text-gray-500 mt-4">A closer look at the foundry, fabrication and machine shop equipment that powers our manufacturing capability.</p>
+                    <div class="relative">
+                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
+                            <img src="SLK-IMG/INFRA/INFRA-FABRICATION/HEAT%20CHAMBER.jpg" alt="Fabrication Setup" class="w-full h-[260px] sm:h-[360px] md:h-[500px] object-cover transition-transform duration-700 gallery-thumb">
+                        </div>
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+                    </div>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-MACHINERY & EQUIPMENT/CUPOLO%20FURNACE%206%20TONNES%20CAPACITYY.jpg" alt="Cupola Furnace" class="w-full h-48 object-cover transition-transform duration-700"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-MACHINERY & EQUIPMENT/HYDRAULIC%20PRESS.jpg" alt="Hydraulic Press" class="w-full h-48 object-cover transition-transform duration-700"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-MACHINERY & EQUIPMENT/LATHE%205.jpg" alt="Lathe Machine" class="w-full h-48 object-cover transition-transform duration-700"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-MACHINERY & EQUIPMENT/MILLING%206.jpg" alt="Milling Machine" class="w-full h-48 object-cover transition-transform duration-700"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-MACHINERY & EQUIPMENT/PLANNER.jpg" alt="Planner Machine" class="w-full h-48 object-cover transition-transform duration-700"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-MACHINERY & EQUIPMENT/SHAPING%20MACHINE.jpg" alt="Shaping Machine" class="w-full h-48 object-cover transition-transform duration-700"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-MACHINERY & EQUIPMENT/OVERHEAD%20CRANE%2010%20TONNES%20CAPACITY%20FOR%20FABRICATION.jpg" alt="Overhead Crane" class="w-full h-48 object-cover transition-transform duration-700"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-MACHINERY & EQUIPMENT/MOULDING%201.jpg" alt="Moulding Facility" class="w-full h-48 object-cover transition-transform duration-700"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/ARGON%20WELDING%20MACHINE.jpg" alt="Argon Welding Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/BENDING%20MACHINE.jpg" alt="Bending Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/CUTTING%20MACHINES.jpg" alt="Cutting Machines" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/HYDRAULIC%20PRESSURE.jpg" alt="Hydraulic Pressure" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/LATHE%20MACHINE_01.jpg" alt="Lathe Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/LATHE%20MACHINE_02.jpg" alt="Lathe Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/LATHE%20MACHINE_03.jpg" alt="Lathe Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/OVERHEAD%20CHAIN.jpg" alt="Overhead Chain" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/OVERHEAD%20CRANE.jpg" alt="Overhead Crane" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/PNEUMATIC%20TESTING.jpg" alt="Pneumatic Testing" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/POWER%20PRESS%20MACHINE.jpg" alt="Power Press Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-FABRICATION/HEAT%20CHAMBER.jpg" alt="Heat Chamber" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
                 </div>
             </div>
 
-            <!-- Quality Control & Warehouse -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Machine Shop Set up -->
+            <div id="machine-shop" class="scroll-mt-32 space-y-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative order-2 lg:order-1">
+                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl infra-card">
+                            <img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/LATHE%205.jpg" alt="Machine Shop" class="w-full h-[260px] sm:h-[360px] md:h-[500px] object-cover transition-transform duration-700 gallery-thumb">
+                        </div>
+                    </div>
+                    <div class="space-y-8 order-1 lg:order-2">
+                        <span class="text-accent font-bold uppercase tracking-widest text-sm">Precision Machining</span>
+                        <h2 class="text-4xl font-extrabold text-primary">Machine Shop Set Up</h2>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">Capacity for fully machining of all items from 60" size & 20ft length</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">5 Lathe machines</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">2 Radial Drilling Units</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Shaping machine</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Planner machine</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium text-lg">1 Milling machine</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/LATHE.jpg" alt="Lathe Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/DRILLING%20MACHINE.jpg" alt="Drilling Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/SHAPING%20MACHINE.jpg" alt="Shaping Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/PLANNER.jpg" alt="Planner Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/MILLING.jpg" alt="Milling Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/MILLING%204_01.jpg" alt="Milling Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/MILLING%20MACHINE1.jpg" alt="Milling Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/MACHINE%20SHOP-INFRA/LATHE%205.jpg" alt="Lathe Machine" class="w-full h-48 object-cover transition-transform duration-700 gallery-thumb"></div>
+                </div>
+            </div>
+
+            <!-- Quality Control & Testing Facility -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <!-- Quality Control -->
-                <div class="bg-surface-muted p-12 rounded-[2.5rem] border border-gray-100">
-                    <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg">
-                        <i class="fa-solid fa-microscope text-2xl"></i>
+                <div id="quality-control" class="scroll-mt-32 space-y-8">
+                    <div class="bg-surface-muted p-10 rounded-[2.5rem] border border-gray-100">
+                        <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg">
+                            <i class="fa-solid fa-microscope text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-extrabold text-primary mb-6">Quality Control Set Up</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">5 Hydraulic pressure testing machine capacity</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">UTS MACHINE (Tensile Strength)</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">CHEMICAL COMPOSITION TESTING</span></li>
+                        </ul>
                     </div>
-                    <h3 class="text-3xl font-extrabold text-primary mb-6">Quality Control Set Up</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">5 Hydraulic pressure testing machine capacity</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">UTS MACHINE (Tensile Strength)</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-600">CHEMICAL COMPOSITION TESTING</span></li>
-                    </ul>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-QUALITY%20CONTROL/QUALITY-CONTROL_01.jpg" alt="Quality Control" class="w-full h-32 object-cover transition-transform duration-700 gallery-thumb"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-QUALITY%20CONTROL/QUALITY-CONTROL_02.jpg" alt="Quality Control" class="w-full h-32 object-cover transition-transform duration-700 gallery-thumb"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-QUALITY%20CONTROL/QUALITY-CONTROL_03.jpg" alt="Quality Control" class="w-full h-32 object-cover transition-transform duration-700 gallery-thumb"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-QUALITY%20CONTROL/QUALITY-CONTROL_04.jpg" alt="Quality Control" class="w-full h-32 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    </div>
                 </div>
 
-                <!-- Warehousing -->
-                <div class="bg-primary p-12 rounded-[2.5rem] shadow-xl shadow-primary/20">
-                    <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg">
-                        <i class="fa-solid fa-warehouse text-2xl"></i>
+                <!-- Testing Facility -->
+                <div id="testing" class="scroll-mt-32 space-y-8">
+                    <div class="bg-primary p-10 rounded-[2.5rem] shadow-xl shadow-primary/20">
+                        <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg">
+                            <i class="fa-solid fa-vial text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-extrabold text-white mb-6">Testing Facility</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-300">Hydraulic pressure testing for pipes, fittings & pressure vessels</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-300">UTS tensile strength testing</span></li>
+                        </ul>
                     </div>
-                    <h3 class="text-3xl font-extrabold text-white mb-6">Ware House Set Up</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-300">20,000 sq ft area for warehousing</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span class="text-gray-300">Overhead crane for loading & unloading</span></li>
-                    </ul>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-TESTING%20FACILITY/HYDRAULIC%20PRESSURE%20TESTING.jpg" alt="Hydraulic Pressure Testing" class="w-full h-32 object-cover transition-transform duration-700 gallery-thumb"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-TESTING%20FACILITY/UTS%20TENSILE%20STRENGTH.jpg" alt="UTS Tensile Strength" class="w-full h-32 object-cover transition-transform duration-700 gallery-thumb"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-TESTING%20FACILITY/IMG%20WA0059.jpg" alt="Testing Facility" class="w-full h-32 object-cover transition-transform duration-700 gallery-thumb"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg infra-card"><img src="SLK-IMG/INFRA/INFRA-TESTING%20FACILITY/IMG%20WA0060.jpg" alt="Testing Facility" class="w-full h-32 object-cover transition-transform duration-700 gallery-thumb"></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Raw Material Stores -->
-            <div class="bg-surface-muted p-12 rounded-[2.5rem] border border-gray-100 relative overflow-hidden">
+            <!-- Warehouse & Raw Material Stores -->
+            <div id="warehouse" class="scroll-mt-32 bg-surface-muted p-12 rounded-[2.5rem] border border-gray-100 relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
                 <div class="relative z-10">
-                    <h2 class="text-4xl font-extrabold text-primary mb-8">Raw Material Stores Set Up</h2>
+                    <h2 class="text-4xl font-extrabold text-primary mb-8">Warehouse &amp; Raw Material Stores</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div class="space-y-6">
                             <p class="text-lg text-gray-600 leading-relaxed">
                                 We maintain a massive inventory of raw materials to ensure uninterrupted production and rapid fulfillment of large orders.
                             </p>
                             <ul class="space-y-3">
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">15,000 sq ft area for raw material stocking.</span></li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">BEST RAW MATERIAL used (PIG IRON OF TATA, PLATES OF TATA, JINDAL, SAIL).</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">20,000 sq ft area for warehousing</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">15,000 sq ft area for raw material stocking</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">Overhead crane for loading &amp; unloading</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-accent mt-1"></i><span class="text-gray-600 font-medium">BEST RAW MATERIAL used (PIG IRON OF TATA, PLATES OF TATA, JINDAL, SAIL)</span></li>
                             </ul>
                         </div>
-                        <div class="rounded-3xl overflow-hidden h-64">
-                            <img src="SLK-IMG/INFRA/WAREHOUSE-INFRA/WAREHOUSE.jpg" alt="Raw Material Store" class="w-full h-full object-cover">
+                        <div class="rounded-3xl overflow-hidden h-64 infra-card">
+                            <img src="SLK-IMG/INFRA/WAREHOUSE-INFRA/WAREHOUSE.jpg" alt="Raw Material Store" class="w-full h-full object-cover transition-transform duration-700 gallery-thumb">
                         </div>
                     </div>
                 </div>
@@ -203,6 +277,12 @@
         </div>
     </section>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-[200] hidden items-center justify-center p-6">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-accent transition-colors"><i class="fa-solid fa-xmark"></i></button>
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-xl shadow-2xl">
+    </div>
+
     <!-- Footer -->
     <footer class="bg-primary pt-20 pb-10 border-t border-white/10">
         <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -210,7 +290,7 @@
                 <a href="index.html" class="inline-block bg-white rounded-lg px-3 py-2">
                     <img src="images/logo.png" alt="SLK Traders" class="h-7 w-auto">
                 </a>
-                <p class="text-sm text-gray-400 leading-relaxed">Precision-engineered solutions for the world's most demanding industrial sectors. From casting to delivery.</p>
+                <p class="text-sm text-gray-400 leading-relaxed">Fabricators of steel &amp; alloy steel, pressure vessels &amp; impellers. Graded casting, boiler spares &amp; pipe fittings as per customer specification.</p>
                 <div class="flex gap-4">
                     <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent transition-all"><i class="fa-brands fa-twitter"></i></a>
@@ -238,15 +318,15 @@
             <div class="space-y-6">
                 <h4 class="font-bold text-white uppercase tracking-widest text-sm">Contact</h4>
                 <div class="space-y-4">
-                    <div class="flex gap-3"><i class="fa-solid fa-location-dot text-accent mt-1"></i><p class="text-sm text-gray-400">123 Industrial Estate, Block B,<br>Engineering Hub, CIP 560001</p></div>
-                    <div class="flex gap-3"><i class="fa-solid fa-phone text-accent mt-1"></i><p class="text-sm text-gray-400">+91 (800) 245-0900</p></div>
-                    <div class="flex gap-3"><i class="fa-solid fa-envelope text-accent mt-1"></i><p class="text-sm text-gray-400">info@slktraders.com</p></div>
+                    <div class="flex gap-3"><i class="fa-solid fa-location-dot text-accent mt-1"></i><p class="text-sm text-gray-400">4/39, Kumarpara Road, Liluah,<br>Howrah - 711204, West Bengal, India</p></div>
+                    <div class="flex gap-3"><i class="fa-solid fa-phone text-accent mt-1"></i><p class="text-sm text-gray-400">+91 33-26456290 / 6480<br>+91 9831089302</p></div>
+                    <div class="flex gap-3"><i class="fa-solid fa-envelope text-accent mt-1"></i><p class="text-sm text-gray-400">info@slktraders.in</p></div>
                 </div>
             </div>
         </div>
         <div class="container mx-auto px-4 md:px-8 pt-8 border-t border-white/10">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-xs text-gray-500">© 2024 SLK TRADERS. Industrial Engineering Excellence Since 1992.</p>
+                <p class="text-xs text-gray-500">© 2024 SLK TRADERS. Industrial Engineering Excellence Since 1952.</p>
                 <div class="flex gap-6">
                     <img src="https://img.icons8.com/color/48/iso.png" alt="ISO Certified" class="h-6">
                     <img src="https://img.icons8.com/color/48/safe-ok.png" alt="Safety Compliant" class="h-6">
@@ -266,5 +346,25 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        document.querySelectorAll('.gallery-thumb').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                lightbox.classList.remove('hidden');
+            });
+        });
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightbox.classList.add('hidden');
+            lightboxImg.src = '';
+        }
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
 </body>
 </html>
