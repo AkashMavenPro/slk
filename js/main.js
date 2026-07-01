@@ -122,7 +122,7 @@ const categoryData = {
         }
     },
     'pipeline': {
-        title: 'Pipeline & Fittings',
+        title: 'BIS Marked C.I. D/F Pipe & Fittings',
         description: 'We manufacture and supply high-quality Cast Iron (CI) piping systems and industrial fittings designed for water supply, sewage treatment, chemical processing, and heavy-duty industrial applications. Our products are engineered to meet industry standards, ensuring strength, durability, leak-proof performance, and long service life in demanding operating environments.',
         details: 'Our range includes Cast Iron Double Flange Pipes manufactured as per IS 7181 standards, available in sizes ranging from 80 mm to 600 mm diameters with welded flanges for secure installation and efficient flow management. We also provide Cast Iron Flanged Puddle Pipes with flanged or plain (spigot) ends, specially designed for concrete and wall penetration applications.',
         moreInfo: 'In addition, we manufacture a complete range of CI pipe fittings as per IS 1538 standards, including concentric reducers, MJ collars, tees, Y-tees, hydrant tees, socketed bends, crosses, joints, duckfoot bends, and custom pipeline fittings. Supported by a dedicated machining and finishing facility with skilled personnel, we ensure precision manufacturing and superior product quality.',

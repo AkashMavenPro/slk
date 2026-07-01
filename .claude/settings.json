@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(taskkill //F //PID 21828)",
+      "Bash(powershell -Command \"Expand-Archive -Path 'PRODUCTS.zip' -DestinationPath 'C:\\\\Users\\\\subha\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-subha-OneDrive-Desktop-Deploy-slk\\\\d7f77cf1-54be-4545-a4ef-e3059faf851d\\\\scratchpad\\\\PRODUCTS_extracted' -Force\")"
+    ]
+  }
+}
