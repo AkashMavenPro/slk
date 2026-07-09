@@ -1424,10 +1424,6 @@ h1,
   background-color: rgb(255 255 255 / 0.95);
 }
 
-.bg-\[url\(\'SLK-IMG\/INFRA\/INFRA-\%20MOULDING\%20CAPACITY\/MOULDING\.jpg\'\)\] {
-  background-image: url('SLK-IMG/INFRA/INFRA-%20MOULDING%20CAPACITY/MOULDING.jpg');
-}
-
 .bg-\[url\(\'images\/hero\.png\'\)\] {
   background-image: url('images/hero.png');
 }
@@ -2148,10 +2144,6 @@ h1,
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:grid-cols-4 {
