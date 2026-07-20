@@ -751,10 +751,6 @@ h1,
   order: 1;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -928,8 +924,8 @@ h1,
   height: 10rem;
 }
 
-.h-56 {
-  height: 14rem;
+.h-48 {
+  height: 12rem;
 }
 
 .h-6 {
@@ -958,10 +954,6 @@ h1,
 
 .h-\[280px\] {
   height: 280px;
-}
-
-.h-\[320px\] {
-  height: 320px;
 }
 
 .h-full {
@@ -1116,10 +1108,6 @@ h1,
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
