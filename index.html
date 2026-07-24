@@ -58,58 +58,59 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#f8fafc]">
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-primary bg-cover bg-center" style="background-image:url('images/hero.jpeg');">
+
+        <!-- Readability overlay: dark teal gradient over the photo -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#081f27] via-[#0D3846]/85 to-[#0D3846]/25"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/25"></div>
 
         <div class="container mx-auto px-4 md:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div class="max-w-2xl">
-                    <span class="inline-block px-3 py-1 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded mb-8">Since 1952</span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary leading-[1.2] mb-8">
-                        Leading Manufacturers of Steel & Alloy Steel Components <span class="text-accent">Since 1952</span>
-                    </h1>
-                    <p class="text-lg text-gray-600 mb-10 max-w-xl leading-relaxed font-medium">
-                        Providing complete end-to-end casting, fabrication &amp; machining solutions under one roof. With a legacy of 70 years in the iron and steel industry, we specialize in delivering custom manufacturing solutions as per customer specifications and engineering drawings.
-                    </p>
-                    
-                    <!-- Feature Buttons -->
-                    <div class="flex flex-wrap gap-3 mb-10">
-                        <div class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs font-bold text-primary flex items-center gap-2 shadow-sm">
-                            <i class="fa-solid fa-check-circle text-accent"></i> 70+ Years Experience
-                        </div>
-                        <div class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs font-bold text-primary flex items-center gap-2 shadow-sm">
-                            <i class="fa-solid fa-check-circle text-accent"></i> 3rd Generation Expertise
-                        </div>
-                        <div class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs font-bold text-primary flex items-center gap-2 shadow-sm">
-                            <i class="fa-solid fa-check-circle text-accent"></i> PAN India Supply
-                        </div>
-                    </div>
+            <div class="max-w-3xl">
+                <span class="inline-block px-3 py-1 bg-accent text-white text-[10px] font-bold uppercase tracking-widest rounded mb-8">Since 1952</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-8 [text-shadow:0_2px_16px_rgba(0,0,0,0.45)]">
+                    Leading Manufacturers of Steel &amp; Alloy Steel Components <span class="text-secondary">Since 1952</span>
+                </h1>
+                <p class="text-lg text-white/90 mb-10 max-w-xl leading-relaxed font-medium [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">
+                    Providing complete end-to-end casting, fabrication &amp; machining solutions under one roof. With a legacy of 70 years in the iron and steel industry, we specialize in delivering custom manufacturing solutions as per customer specifications and engineering drawings.
+                </p>
 
-                    <!-- Made in India & MSME Badges -->
-                    <div class="flex flex-wrap items-center gap-10 mb-10">
-                        <div class="flex flex-col items-center gap-2">
-                            <img src="images/MakeinIndia.jpg" alt="Make in India" class="h-20 w-auto object-contain">
-                            <p class="text-xs font-bold uppercase tracking-wide text-primary">Make in India</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-2">
-                            <img src="images/msme.jpg" alt="MSME Registered" class="h-20 w-auto object-contain">
-                            <p class="text-xs font-bold uppercase tracking-wide text-primary">MSME Registered</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-2">
-                            <img src="images/msme.jpg" alt="UDYAM Registered" class="h-20 w-auto object-contain">
-                            <p class="text-xs font-bold uppercase tracking-wide text-primary">UDYAM Registered</p>
-                        </div>
+                <!-- Feature Buttons -->
+                <div class="flex flex-wrap gap-3 mb-10">
+                    <div class="px-4 py-2 bg-white rounded-full text-xs font-bold text-primary flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-check-circle text-accent"></i> 70+ Years Experience
                     </div>
-
-                    <div class="flex flex-col sm:flex-row gap-6">
-                        <a href="products.html?cat=all" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary rounded font-bold text-white hover:bg-primary-light transition-all duration-300 text-sm shadow-xl shadow-primary/10">
-                            Explore Products <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
+                    <div class="px-4 py-2 bg-white rounded-full text-xs font-bold text-primary flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-check-circle text-accent"></i> 3rd Generation Expertise
+                    </div>
+                    <div class="px-4 py-2 bg-white rounded-full text-xs font-bold text-primary flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-check-circle text-accent"></i> PAN India Supply
                     </div>
                 </div>
-                <div class="hidden lg:flex items-center justify-center">
-                    <img src="images/70_yrs.jpeg" alt="70+ Years Legacy" class="w-full max-w-md">
+
+                <!-- Made in India & MSME Badges -->
+                <div class="flex flex-wrap items-center gap-4 mb-10">
+                    <div class="flex flex-col items-center gap-1 bg-white rounded-xl px-4 py-3 shadow-lg">
+                        <img src="images/MakeinIndia.jpg" alt="Make in India" class="h-16 w-auto object-contain">
+                        <p class="text-[10px] font-bold uppercase tracking-wide text-primary">Make in India</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-1 bg-white rounded-xl px-4 py-3 shadow-lg">
+                        <img src="images/msme.jpg" alt="MSME Registered" class="h-16 w-auto object-contain">
+                        <p class="text-[10px] font-bold uppercase tracking-wide text-primary">MSME Registered</p>
+                    </div>
+                   
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="products.html?cat=all" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent rounded font-bold text-white hover:bg-accent-hover transition-all duration-300 text-sm shadow-xl shadow-black/20">
+                        Explore Products <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Legacy Seal -->
+        <div class="hidden xl:flex absolute top-[40%] left-[71%] -translate-x-1/2 -translate-y-1/2 justify-center items-center w-60 h-60 2xl:w-80 2xl:h-80 z-10">
+            <img src="images/70_yrs.jpeg" alt="70+ Years Legacy" class="w-full h-full object-contain drop-shadow-2xl">
         </div>
     </section>
 
