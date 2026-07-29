@@ -5,21 +5,21 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0D3846', // Primary Dark Teal — navbar, hero overlay, footer, headings
-          light: '#1a5a6b',
-          dark: '#081f27',
+          DEFAULT: '#006EA9', // Primary Blue — navbar, buttons, key branding
+          light: '#53AFD8',   // Light Blue
+          dark: '#005B91',    // Dark Blue — footer, hover states, dark sections
         },
         accent: {
-          DEFAULT: '#00838F', // Primary Accent Teal — CTA buttons, links, hover states
-          hover: '#006064',
-          light: '#E6F2F2',   // Light Background
+          DEFAULT: '#0876AF', // Medium Blue — links, icons, secondary buttons
+          hover: '#0A5D8C',   // Deep Blue — gradients and section accents
+          light: '#eaf6fb',
         },
         secondary: {
-          DEFAULT: '#80CBC4', // Secondary Teal — icons, highlights, subtle accents
+          DEFAULT: '#53AFD8', // Light Blue — highlights, backgrounds, decorative shapes
         },
         surface: {
-          DEFAULT: '#F4F9F9',
-          muted: '#E6F2F2',   // Light Background — alternate section backgrounds
+          DEFAULT: '#F5FAFC',
+          muted: '#EAF4F9',   // Light Background — alternate section backgrounds
         },
         neutral: {
           DEFAULT: '#546E7A', // Neutral Gray — paragraph text and secondary elements
